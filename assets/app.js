@@ -125,11 +125,17 @@
 
     Chart.defaults.font.family = "'DM Sans', system-ui, sans-serif";
     Chart.defaults.color = muted;
+    Chart.defaults.responsive = true;
+    Chart.defaults.maintainAspectRatio = false;
+    const narrow = window.matchMedia("(max-width: 639px)").matches;
+    if (narrow) {
+      Chart.defaults.font.size = 11;
+    }
 
     // 1. Opportunity universe — horizontal bar
     const oppCtx = document.getElementById("chart-opportunity");
     if (oppCtx) {
-      const labels = DATA.opportunityScores.map((d) => d.id + "  " + d.name.replace(/^T\d+\s/, "").slice(0, 28));
+      const labels = DATA.opportunityScores.map((d) => d.id + "  " + d.name.replace(/^T\d+\s/, "").slice(0, narrow ? 16 : 28));
       const scores = DATA.opportunityScores.map((d) => d.score);
       const colors = DATA.opportunityScores.map((d) =>
         d.id === "T02" ? gold : d.highlight ? tealSoft : "rgba(154,150,140,0.55)"
@@ -433,7 +439,7 @@
               angleLines: { color: grid },
               pointLabels: {
                 color: muted,
-                font: { size: 10, family: "'DM Sans', sans-serif" }
+                font: { size: narrow ? 8 : 10, family: "'DM Sans', sans-serif" }
               }
             }
           }
