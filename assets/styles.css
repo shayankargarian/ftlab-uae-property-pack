@@ -49,7 +49,7 @@ body {
 }
 
 a { color: var(--gold-soft); text-decoration: none; }
- a:hover { color: var(--gold); text-decoration: underline; }
+a:hover { color: var(--gold); text-decoration: underline; }
 
 code, .path {
   font-family: var(--font-mono);
