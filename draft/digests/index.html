@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0e12" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>DRAFT · UAE property industry digest · Shayan only</title>
+  <meta name="description" content="Private draft industry digest. Not public. Not for Brand. Run 2026-09-13-uae-property." />
+  <style>
+:root {
+  --bg: #0c0e12;
+  --bg-elev: #141820;
+  --card: #171c26;
+  --border: rgba(212,175,106,.16);
+  --line: rgba(255,255,255,.07);
+  --text: #e8e6e1;
+  --muted: #b0aba0;
+  --dim: #8a857c;
+  --gold: #c9a227;
+  --gold-s: #d4af6a;
+  --teal: #3d9b8f;
+  --teal-s: #5cb8ab;
+  --risk: #c45c5c;
+  --risk-s: #d47878;
+  --watch: #8b7ec8;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --pad: 1rem;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(800px 420px at 8% -8%, rgba(201,162,39,.08), transparent 55%),
+    radial-gradient(640px 360px at 92% 0%, rgba(61,155,143,.07), transparent 50%),
+    var(--bg);
+  padding-bottom: calc(2rem + var(--safe-b));
+}
+body::before {
+  content: "DRAFT";
+  position: fixed; inset: 18% -10%;
+  font: 700 22vw/1 var(--sans);
+  color: rgba(255,255,255,.035);
+  transform: rotate(-18deg);
+  pointer-events: none; z-index: 0;
+}
+.wrap { position: relative; z-index: 1; max-width: 42rem; margin: 0 auto; padding: 0 var(--pad); }
+.banner {
+  position: sticky; top: 0; z-index: 20;
+  background: #1a1408;
+  color: #f0d48a;
+  font-size: .78rem; font-weight: 600; letter-spacing: .04em;
+  text-align: center;
+  padding: calc(.55rem + var(--safe-t)) .75rem .55rem;
+  border-bottom: 1px solid rgba(201,162,39,.35);
+}
+.banner code { font-family: var(--mono); font-size: .72rem; }
+.pills { display: flex; flex-wrap: wrap; gap: .4rem; margin: .9rem 0 0; }
+.pill {
+  font-size: .72rem; font-weight: 600; letter-spacing: .02em;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: .2rem .55rem; color: var(--muted);
+}
+.pill.hold { border-color: rgba(201,162,39,.45); background: rgba(201,162,39,.16); color: var(--gold-s); }
+.pill.risk { border-color: rgba(196,92,92,.4); background: rgba(196,92,92,.14); color: var(--risk-s); }
+.pill.teal { border-color: rgba(61,155,143,.4); background: rgba(61,155,143,.14); color: var(--teal-s); }
+h1 { font-family: var(--serif); font-weight: 400; font-size: 2.05rem; line-height: 1.15; margin: 1.1rem 0 .5rem; }
+h2 { font-family: var(--serif); font-weight: 400; font-size: 1.45rem; margin: 2rem 0 .55rem; }
+h3 { font-size: .92rem; text-transform: uppercase; letter-spacing: .08em; color: var(--gold-s); margin: 1.25rem 0 .4rem; font-weight: 600; }
+.kicker { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-top: 1.25rem; }
+.lede { color: var(--muted); font-size: 1.05rem; }
+p { margin: .55rem 0; }
+.ev {
+  display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; border-radius: 4px; padding: .08rem .38rem; vertical-align: .08em;
+}
+.ev.proven { background: rgba(61,155,143,.22); color: var(--teal-s); }
+.ev.soft { background: rgba(201,162,39,.2); color: var(--gold-s); }
+.ev.unk { background: rgba(196,92,92,.2); color: var(--risk-s); }
+.ev.conn { background: rgba(139,126,200,.2); color: #c4b8ee; }
+.stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .55rem; margin: 1.1rem 0; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: .7rem .65rem .8rem; }
+.stat .n { font-family: var(--serif); font-size: 1.7rem; line-height: 1; }
+.stat .l { font-size: .68rem; color: var(--dim); margin-top: .25rem; letter-spacing: .04em; text-transform: uppercase; }
+.stat.p .n { color: var(--teal-s); }
+.stat.s .n { color: var(--gold-s); }
+.stat.u .n { color: var(--risk-s); }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: .9rem 1rem; margin: .7rem 0;
+}
+.callout {
+  border-left: 3px solid var(--gold);
+  background: rgba(201,162,39,.08);
+  padding: .75rem .9rem; margin: 1rem 0; border-radius: 0 10px 10px 0;
+}
+.callout.teal { border-left-color: var(--teal); background: rgba(61,155,143,.08); }
+.callout.risk { border-left-color: var(--risk); background: rgba(196,92,92,.08); }
+.chart {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: .9rem 1rem 1rem; margin: .8rem 0;
+}
+.chart h3 { margin-top: 0; }
+.cap { font-size: .78rem; color: var(--dim); margin: .15rem 0 .7rem; }
+.bar-row { display: grid; grid-template-columns: 6.2rem 1fr auto; gap: .45rem; align-items: center; margin: .4rem 0; font-size: .86rem; }
+.bar-row span.lab { color: var(--muted); }
+.bar-row span.val { font-family: var(--mono); font-size: .78rem; color: var(--text); white-space: nowrap; }
+.track { height: 10px; background: rgba(255,255,255,.06); border-radius: 99px; overflow: hidden; }
+.track i { display: block; height: 100%; border-radius: 99px; }
+.track i.teal { background: linear-gradient(90deg, #2f7f76, var(--teal-s)); }
+.track i.gold { background: linear-gradient(90deg, #a88820, var(--gold-s)); }
+.track i.watch { background: linear-gradient(90deg, #6b5ea8, #b9aee4); }
+.mix {
+  width: 7.5rem; height: 7.5rem; border-radius: 50%;
+  margin: .4rem auto .6rem;
+  background: conic-gradient(var(--teal) 0 15.87%, var(--gold) 15.87% 85.71%, var(--risk) 85.71% 100%);
+  box-shadow: inset 0 0 0 18px var(--card);
+}
+.legend { display: flex; justify-content: center; flex-wrap: wrap; gap: .55rem 1rem; font-size: .78rem; color: var(--muted); }
+.legend b { font-weight: 600; }
+.sw { display: inline-block; width: .65rem; height: .65rem; border-radius: 2px; margin-right: .3rem; vertical-align: -.05rem; }
+table { width: 100%; border-collapse: collapse; font-size: .82rem; margin: .4rem 0 1rem; }
+th, td { text-align: left; padding: .45rem .35rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--dim); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; }
+.players { display: grid; gap: .55rem; }
+.player { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .7rem .8rem; }
+.player strong { display: block; margin-bottom: .15rem; }
+.player small { color: var(--dim); }
+.toc { display: flex; flex-wrap: wrap; gap: .4rem .7rem; margin: .8rem 0 0; }
+.toc a { color: var(--teal-s); text-decoration: none; font-size: .85rem; font-weight: 600; }
+.toc a:hover { text-decoration: underline; }
+ul.tight { margin: .3rem 0 .7rem; padding-left: 1.15rem; }
+ul.tight li { margin: .25rem 0; }
+.foot { color: var(--dim); font-size: .78rem; margin-top: 2.2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+code { font-family: var(--mono); font-size: .84em; }
+@media (min-width: 640px) {
+  .wrap { padding: 0 1.4rem; }
+  h1 { font-size: 2.35rem; }
+  .charts2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+}
+  </style>
+</head>
+<body>
+  <div class="banner" role="status"><strong>DRAFT</strong> · not public · no Brand · <code>draft_needs_approval</code> · Shayan leave-draft 14 Sep 2026</div>
+  <div class="wrap">
+    <p class="kicker">Industry desk · UAE property · private</p>
+    <h1>What is actually known, and what is still Soft</h1>
+    <p class="lede">One combined digest for run <code>2026-09-13-uae-property</code>. Australian English. IC scores, BUILD NOW, and capital language stripped. Charts use only numbers already in the evidence ledger, shelf extracts, or connector cache. Nothing invented.</p>
+    <div class="pills">
+      <span class="pill hold">DRAFT</span>
+      <span class="pill risk">no Brand</span>
+      <span class="pill teal">pubs-first Verifier 13 Sep</span>
+      <span class="pill">connectors spec 14 Sep</span>
+    </div>
+    <nav class="toc" aria-label="Jump">
+      <a href="#narrative">Story</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#system">System</a>
+      <a href="#competitors">Competitors</a>
+      <a href="#pubs">Pubs vs Soft</a>
+      <a href="#open">Open</a>
+    </nav>
+
+    <div class="stats" id="narrative">
+      <div class="stat p"><div class="n">10</div><div class="l">Proven · ledger</div></div>
+      <div class="stat s"><div class="n">44</div><div class="l">Soft · ledger</div></div>
+      <div class="stat u"><div class="n">9</div><div class="l">Unknown · n=63</div></div>
+    </div>
+
+    <div class="callout">
+      <strong>Read this as a desk brief, not a brochure.</strong> Dubai has the deepest escrow / RERA process layer. Abu Dhabi now has operative jointly-owned-property and owners-committee text on the shelf (Decisions 25 and 26). Software substitutes already exist for generic OA and developer ERP. White space, if any, is Abu Dhabi-specific Centre workflow, still unproven by third-party evidence. Management-company headcount is still <span class="ev unk">Unknown</span> (E051).
+    </div>
+
+    <h2>The industry in one pass</h2>
+    <p>Land and master planning feed construction. Off-plan sales sit on project escrow. Title, brokerage, and mortgages follow. Occupancy and facilities management then carry service charges, owners’ associations, and bilingual ops. Software money is smaller than land uplift and portals, but it grows where compliance is mandatory: escrow ledgers, statutory OA reporting, electronic accounting.</p>
+    <p>Three emirates, three rulebooks. Dubai DLD / RERA / Oqood / Ejari / Mollak. Abu Dhabi ADREC / DMT / DARI. Sharjah SRERD plus a still-Soft escrow pathway. Cross-emirate owners live in checklists and counsel. Industrial comps and escrow-progress APIs that contractors could call mostly do not exist in public.</p>
+    <p>Regulator pressure that is <span class="ev proven">Proven</span> on the shelf: Dubai Laws 8/2007 and 16/2007; Al Sa’fat 154/2020; DMT package announcement; Decision 25 Arts 20(6), 23(4), 24; Decision 26 Arts 2-5; ADREC 2025 and H1 2026 aggregates; DLD Project 360 launch 3 Sep 2026. The 28 Feb 2026 “effective date” is <span class="ev soft">Soft</span> counsel (E084). Primary Decisions say effective from Official Gazette publication. Gazette issue still not found.</p>
+
+    <h2 id="numbers">Numbers you can defend</h2>
+    <p class="lede">Abu Dhabi official aggregates only. Dubai 2025/H1 volumes stay in the Soft table below. Do not mix them on one chart.</p>
+
+    <div class="charts2">
+      <div class="chart">
+        <h3>Abu Dhabi transaction value</h3>
+        <p class="cap">AED billion. <span class="ev proven">Proven</span> E065 (full year 2025) and E069 (H1 2026). Different periods: not a like-for-like YoY bar. E069 separately states H1 2026 +112% YoY.</p>
+        <div class="bar-row"><span class="lab">2025 full</span><div class="track"><i class="teal" style="width:100%"></i></div><span class="val">142</span></div>
+        <div class="bar-row"><span class="lab">H1 2026</span><div class="track"><i class="gold" style="width:82.4%"></i></div><span class="val">117</span></div>
+        <p class="cap">2025 mix: sales AED 99.4bn / 25,604 txns; mortgages AED 42.7bn / 17,210. H1 2026 mix: sales AED 86.1bn / 16,838; mortgages AED 26.7bn / 8,876. Total 2025 txns 42,814.</p>
+      </div>
+      <div class="chart">
+        <h3>2025 sales vs mortgages (AD)</h3>
+        <p class="cap">AED billion, full year. <span class="ev proven">Proven</span> E065. Max bar = sales 99.4.</p>
+        <div class="bar-row"><span class="lab">Sales</span><div class="track"><i class="teal" style="width:100%"></i></div><span class="val">99.4</span></div>
+        <div class="bar-row"><span class="lab">Mortgages</span><div class="track"><i class="gold" style="width:43%"></i></div><span class="val">42.7</span></div>
+        <p class="cap">Also Proven E066: 56 new development projects in 2025; 3,566 licensed RE professionals (+57.7% YoY). Professionals ≠ management companies.</p>
+      </div>
+    </div>
+
+    <div class="chart">
+      <h3>UAE GDP (World Bank cache)</h3>
+      <p class="cap"><span class="ev conn">Connector</span> <code>world_bank</code> NY.GDP.MKTP.CD · ARE · fetched 2026-09-14. USD billion, current. 2025 observation is <strong>null</strong> in <code>raw</code>: not plotted, not invented. Proven-eligible once a ledger row cites the URL; not yet on this run’s ledger.</p>
+      <div class="bar-row"><span class="lab">2021</span><div class="track"><i class="watch" style="width:76.5%"></i></div><span class="val">422.4</span></div>
+      <div class="bar-row"><span class="lab">2022</span><div class="track"><i class="watch" style="width:92.6%"></i></div><span class="val">511.4</span></div>
+      <div class="bar-row"><span class="lab">2023</span><div class="track"><i class="watch" style="width:94.6%"></i></div><span class="val">522.6</span></div>
+      <div class="bar-row"><span class="lab">2024</span><div class="track"><i class="teal" style="width:100%"></i></div><span class="val">552.3</span></div>
+      <p class="cap">Source: api.worldbank.org/v2/country/ARE/indicator/NY.GDP.MKTP.CD · cache <code>connectors/cache/world_bank/gdp_are_ny_gdp_mktp_cd.json</code>.</p>
+    </div>
+
+    <div class="chart">
+      <h3>Ledger honesty mix</h3>
+      <p class="cap">Counts from <code>evidence-ledger.csv</code> after Claim Verifier Soft→Proven on E067/E068 (13 Sep). n=63.</p>
+      <div class="mix" role="img" aria-label="Doughnut: Proven 10, Soft 44, Unknown 9"></div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--teal)"></i><b>Proven 10</b> (16%)</span>
+        <span><i class="sw" style="background:var(--gold)"></i><b>Soft 44</b> (70%)</span>
+        <span><i class="sw" style="background:var(--risk)"></i><b>Unknown 9</b> (14%)</span>
+      </div>
+    </div>
+
+    <h2 id="system">Where the chain still improvises</h2>
+    <div class="card">
+      <strong>Value chain.</strong> Land / master planning → development / construction → off-plan sales and escrow → title → brokerage and leasing → mortgage → occupancy and FM → asset management → capital markets → redevelopment.
+    </div>
+    <p>Persistent gaps (who feels them): escrow-progress opacity (buyers, banks); service-charge / strata governance (owners, OCs); mid-market leasing on WhatsApp and Excel; no CoStar-class industrial comps; construction claims on legacy PM; cross-emirate compliance; thin valuation outside prime residential; green-ops vs design stamps; snagging at handover scale; Arabic document automation.</p>
+    <p>Negative space named in the gap digest: investor cockpit across DLD + ADREC; queryable industrial lease comps; escrow milestone API; OC treasury matching Abu Dhabi unified bylaws; photo progress ledger banks would accept; verified broker-performance market.</p>
+
+    <h2 id="competitors">Competitor triad (IC-stripped)</h2>
+    <p class="lede">Vendor claims are <span class="ev soft">Soft</span> unless noted. Source: <code>research/competitors/triad-matrix.md</code> and search units S061-S068. No scores, no BUILD language.</p>
+
+    <h3>Local · UAE</h3>
+    <div class="players">
+      <div class="player"><strong>ADDA · Mygate</strong> Mollak-integrated OA suites (service charges, budgets, resident apps, VAT). Nearest generic OA substitutes. <span class="ev soft">Soft</span> · S061</div>
+      <div class="player"><strong>Ajiad · Emrill Techsphere</strong> FM / tenancy SaaS and a captive IFM digital platform. <span class="ev soft">Soft</span> · S063</div>
+      <div class="player"><strong>Akarati · EscrowOS (Xamun)</strong> Developer ERP with DLD/Ejari/Oqood/TAS/EAS hooks; RERA-shaped escrow OS. <span class="ev soft">Soft</span> · S062</div>
+      <div class="player"><strong>DLD Project 360 / Initial Registration</strong> Government consolidation of project, unit, and escrow views. Launched 3 Sep 2026. <span class="ev proven">Proven</span> E070 · S068</div>
+      <div class="player"><strong>ADREC free complete tooling</strong> Hypothetical Centre substitute. <span class="ev unk">Unknown</span> E063 · S068</div>
+    </div>
+
+    <h3>GCC</h3>
+    <div class="players">
+      <div class="player"><strong>Macquires · PropGOTO / Property Automate</strong> KSA PM / community tools claiming Ejar / ZATCA alignment. Live certification not evidenced. <span class="ev soft">Soft</span> · S064</div>
+      <div class="player"><strong>Andalus (Doha)</strong> Combined PM + FM SaaS marketed across Gulf countries. Footprint claims unverified. <span class="ev soft">Soft</span> · S065</div>
+    </div>
+
+    <h3>Global import</h3>
+    <div class="players">
+      <div class="player"><strong>Yardi · MRI</strong> Enterprise PM/ERP with Middle East presence in vendor materials. Localisation of UAE regulator packs not evidenced on those pages. <span class="ev soft">Soft</span> · S066</div>
+      <div class="player"><strong>Buildium-class HOA</strong> US list prices only. <span class="ev soft">Soft</span> / Estimate · S067</div>
+    </div>
+    <div class="callout teal">
+      <strong>Reading (non-IC).</strong> White space is narrower in generic OA and developer ERP. It is only even arguable where Abu Dhabi Centre workflows differ from Dubai Mollak packs, and that difference is not third-party Proven in this digest.
+    </div>
+
+    <h2 id="pubs">Publications vs Soft press</h2>
+    <p class="lede">Primary statute / Decision / bulletin versus press, counsel, or broker. Strength follows the ledger after the 13 Sep Verifier pass (E067/E068 now Proven on operative clauses only).</p>
+    <table>
+      <thead>
+        <tr><th>Topic</th><th>Primary</th><th>Soft chain</th><th>Strength</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dubai escrow</td><td>Law 8/2007 PDF</td><td> - </td><td><span class="ev proven">Proven</span> E008</td></tr>
+        <tr><td>Dubai RERA</td><td>Law 16/2007</td><td> - </td><td><span class="ev proven">Proven</span> E009</td></tr>
+        <tr><td>Al Sa’fat</td><td>Admin Res. 154/2020</td><td> - </td><td><span class="ev proven">Proven</span> E010</td></tr>
+        <tr><td>Dubai 2025-H1 2026 volumes</td><td>Pulse exists (E007 Soft as dataset cite)</td><td>Zawya / Gulf News / TruHauz citing DLD</td><td><span class="ev soft">Soft</span> E001-E006</td></tr>
+        <tr><td>Project 360</td><td>Dubai Media Office 2026-09-03</td><td>Trade press</td><td><span class="ev proven">Proven</span> E070</td></tr>
+        <tr><td>AD Decision package</td><td>Media Office 2026-03-27</td><td>Counsel round-ups</td><td><span class="ev proven">Proven</span> E012</td></tr>
+        <tr><td>Decision 25 operative</td><td>DMT PDF SRC-P02 Arts 20(6), 23(4), 24</td><td>BSA / Trowers / Lexis</td><td><span class="ev proven">Proven</span> E067</td></tr>
+        <tr><td>Decision 26 OC bylaws</td><td>DMT PDF SRC-P03 Arts 2-5</td><td>Trowers / BLK</td><td><span class="ev proven">Proven</span> E068</td></tr>
+        <tr><td>Decision 24 early escrow</td><td>PDF on shelf SRC-P04</td><td>K&amp;S / counsel</td><td><span class="ev soft">Soft</span> E013</td></tr>
+        <tr><td>Decision 165 refunds</td><td>PDF SRC-P05</td><td>Media Office summary</td><td><span class="ev proven">Proven</span> via E012</td></tr>
+        <tr><td>Effective 28 Feb 2026</td><td>Not in Art.45 (Gazette publication)</td><td>BSA counsel</td><td><span class="ev soft">Soft</span> E084</td></tr>
+        <tr><td>Law 3/2015 as amended 2/2025</td><td>Amended PDF not on shelf</td><td>ADREC / firm summaries</td><td><span class="ev soft">Soft</span> E011</td></tr>
+        <tr><td>ADREC YE2025 / H1 2026</td><td>ADREC / Media Office</td><td> - </td><td><span class="ev proven">Proven</span> E065 E066 E069</td></tr>
+        <tr><td>Management-company list</td><td>Not found (Directory omits)</td><td> - </td><td><span class="ev unk">Unknown</span> E051</td></tr>
+        <tr><td>Sharjah escrow</td><td>Res. 37/2024 secondary</td><td>Khaleej Times / BSA / Tamimi</td><td><span class="ev soft">Soft</span> E041 E071</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Dubai volume claims (do not promote to Proven)</h3>
+    <table>
+      <thead><tr><th>Claim</th><th>Figure</th><th>Why Soft</th></tr></thead>
+      <tbody>
+        <tr><td>E001 sales 2025</td><td>214,912 txns · AED 682.5bn</td><td>Zawya/Gulf News citing DLD; secondary</td></tr>
+        <tr><td>E002 total 2025</td><td>~AED 917-919bn / &gt;270k deals</td><td>Figure drift; Protocol Dubai proposed only</td></tr>
+        <tr><td>E003 mortgages 2025</td><td>50,974 · AED 179.26bn</td><td>Secondary press chain</td></tr>
+        <tr><td>E004 off-plan share</td><td>~62.6% of Dubai 2025 sales</td><td>Dubai, not UAE-wide</td></tr>
+        <tr><td>E005 H1 2026 sales</td><td>AED 286.43bn · 86,005 txns</td><td>Aggregator citing DLD</td></tr>
+        <tr><td>E006 H1 off-plan</td><td>~67% by volume</td><td>Same class as E005</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="open">What still blocks a useful digest</h2>
+    <ul class="tight">
+      <li><span class="ev unk">Unknown</span> E051 accredited management-company list/count (ADREC Directory professions omit).</li>
+      <li><span class="ev unk">Unknown</span> E063 whether ADREC ships a free complete OA/escrow suite.</li>
+      <li><span class="ev unk">Unknown</span> E080 Sharjah escrow project count / enforcement KPIs.</li>
+      <li>Many search units remain <code>backfill: true</code> with empty extracts (example S007, S018).</li>
+      <li>Live connectors exist; this UAE run did not file connector search units before Soft press. World Bank GDP is cached but not ledger-cited. Dubai Pulse / Bayanat are not wired as connectors.</li>
+      <li>Status stays <code>draft_needs_approval</code>. No Brand. No public publish.</li>
+    </ul>
+    <div class="callout risk">
+      <strong>Honesty.</strong> Finding Decision PDFs upgrades availability of primary text. Ledger rows flip only when Claim Verifier accepts quotes. E067 and E068 flipped on operative obligations. Do not treat vendor marketing, counsel blogs, or broker PDFs as Proven.
+    </div>
+
+    <p class="foot">
+      Sources: <code>digests/*.md</code>, <code>evidence-ledger.md</code>, <code>research/competitors/triad-matrix.md</code>, DMT Decision PDFs on shelf, World Bank cache envelope.<br />
+      Diagnosis: <code>digests/DIAGNOSIS.md</code>. Connector rules: <code>specs/CONNECTORS-IN-RESEARCH.md</code>.<br />
+      Self-contained: no Chart.js, no Mermaid, no webfonts required. Open this file on a phone.<br />
+      Run 2026-09-13-uae-property · rebuilt 2026-09-14 · private.
+    </p>
+  </div>
+</body>
+</html>
