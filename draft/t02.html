@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#0b0f14"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>T02 Review — Draft · Private</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
+</script>
+<style>
+:root {
+  --bg:#0b0f14; --card:#141a22; --border:#243041;
+  --text:#e8eef6; --muted:#a8b4c4; --dim:#7a8799;
+  --accent:#5b9fd4; --good:#3dbe8c; --warn:#e0b45c; --bad:#e07a6a;
+  --pad: max(16px, env(safe-area-inset-left));
+  --padr: max(16px, env(safe-area-inset-right));
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin:0; font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg); color: var(--text);
+  padding: max(12px, env(safe-area-inset-top)) var(--padr) max(32px, env(safe-area-inset-bottom)) var(--pad);
+}
+.banner {
+  position: sticky; top:0; z-index:10;
+  background: #1a1208; color: #f0d9a8; border:1px solid #5a4520;
+  padding:10px 12px; border-radius:10px; font-size:14px; font-weight:600;
+  margin-bottom:16px;
+}
+h1 { font-size:1.45rem; margin:0 0 6px; line-height:1.25; }
+h2 { font-size:1.15rem; margin:28px 0 10px; color: var(--accent); }
+h3 { font-size:1rem; margin:16px 0 8px; }
+.sub { color: var(--muted); font-size:0.92rem; margin:0 0 18px; }
+.card {
+  background: var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:14px 14px; margin:10px 0;
+}
+.grid { display:grid; gap:10px; }
+@media (min-width:640px) { .grid.two { grid-template-columns:1fr 1fr; } }
+.tag {
+  display:inline-block; font-size:12px; font-weight:700; letter-spacing:.02em;
+  padding:3px 8px; border-radius:999px; margin-right:6px; margin-bottom:4px;
+}
+.tag.watch { background:#3a2f12; color:#e0b45c; }
+.tag.proven { background:#123528; color:#3dbe8c; }
+.tag.soft { background:#3a2a12; color:#e0b45c; }
+.tag.unk { background:#2a2030; color:#c4a0e0; }
+.tag.hold { background:#2a1212; color:#e07a6a; }
+ul { padding-left:1.15em; margin:8px 0; }
+li { margin:6px 0; }
+.chart-box { position:relative; height:220px; margin:8px 0 4px; }
+.chart-box.tall { height:260px; }
+table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--border); vertical-align:top; }
+th { color: var(--muted); font-weight:600; }
+details { background: var(--card); border:1px solid var(--border); border-radius:12px; padding:10px 12px; margin:8px 0; }
+summary { font-weight:600; cursor:pointer; }
+.mermaid { background:#0e141c; border-radius:10px; padding:8px; overflow-x:auto; }
+.footer { color: var(--dim); font-size:0.8rem; margin-top:28px; }
+path, .path { word-break: break-word; font-family: ui-monospace, monospace; font-size:0.78rem; color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="banner">DRAFT · Private · Not Brand · Human call: T01 + T02 both WATCH (not PILOT) · Day 0 HOLD</div>
+
+<h1>T02 deep review</h1>
+<p class="sub">Abu Dhabi strata / owners-corporation finance OS · phone report · 14 Sep 2026</p>
+
+<div class="card">
+  <span class="tag watch">WATCH</span>
+  <span class="tag hold">NO PILOT SPEND</span>
+  <p style="margin:10px 0 0"><strong>What it is.</strong> Software for Abu Dhabi management companies and owners’ committees: fees, ledgers, e-voting, and ADREC-facing reports. Driven by Decision 25/26 strata rules, not another PropTech listing app.</p>
+</div>
+
+<h2>Bot recommendation vs you</h2>
+<div class="grid two">
+  <div class="card"><h3>Bots (autonomous)</h3><p>T02 → PILOT-0 (cheap discovery). T01 → WATCH. Score after haircut ~46/C.</p></div>
+  <div class="card"><h3>You (14 Sep)</h3><p>Both WATCH until you’ve reviewed T02 in depth. Correct hold. No eng, no intros, no capital.</p></div>
+</div>
+
+<h2>Score journey</h2>
+<div class="card">
+  <div class="chart-box"><canvas id="scoreChart"></canvas></div>
+  <p class="sub" style="margin:0">Stage 1 scored the story. Red/Referee cut Soft pain, WTP, timing. Evidence grade <strong>C</strong> = option, not a company.</p>
+</div>
+
+<h2>Evidence mix (ledger n=63)</h2>
+<div class="card">
+  <div class="chart-box"><canvas id="evChart"></canvas></div>
+  <p><span class="tag proven">Proven 10</span> <span class="tag soft">Soft 44</span> <span class="tag unk">Unknown 9</span></p>
+</div>
+
+<h2>What flipped Proven</h2>
+<div class="card">
+  <p><span class="tag proven">E067</span> Decision 25: appoint accredited manager within <strong>30 days</strong> of first handover; <strong>electronic</strong> management/accounting; report to Centre every <strong>6 months</strong>.</p>
+  <p><span class="tag proven">E068</span> Decision 26: OC at ≥<strong>30%</strong> multi-owned; <strong>5–9</strong> resident members; developer excluded; electronic voting.</p>
+  <p><span class="tag soft">E084</span> “28 Feb 2026” effective date stays Soft (Art.45 = Gazette publication; date not in PDF).</p>
+</div>
+
+<h2>Existential tests (still open)</h2>
+<div class="grid">
+  <div class="card"><span class="tag soft">A01</span><strong> Paid SaaS or upload theatre?</strong><br/>Does Decision 25 create budgeted third-party software, or free/upload compliance?</div>
+  <div class="card"><span class="tag unk">E051</span><strong> Buyer count Unknown.</strong><br/>ADREC directory has no management-company profession type. ≥40 was the bots’ floor.</div>
+  <div class="card"><span class="tag unk">E063</span><strong> Free ADREC suite?</strong><br/>If Centre ships a complete free tool, the wedge collapses.</div>
+  <div class="card"><span class="tag soft">A05</span><strong> Dubai OA localisation.</strong><br/>How fast do ADDA/Mygate-class tools ship AD packs?</div>
+</div>
+
+<h2>Capital shape (if you ever reopen)</h2>
+<div class="card">
+<pre class="mermaid">
+flowchart TB
+  W[WATCH · reading only] --> P0[PILOT-0 discovery]
+  P0 --> T{E051 + A01 + E063 clear?}
+  T -->|yes| P1[PILOT-1 thin MVP + paid pilots]
+  T -->|no| K[Stay WATCH or kill]
+  P1 --> B{Paid pilots work?}
+  B -->|yes| BUILD[Only then consider BUILD]
+  B -->|no| K
+</pre>
+  <p class="sub">Red’s rule: no product eng in PILOT-0. Your current WATCH is stricter and coherent.</p>
+</div>
+
+<h2>MVP shape (only after tests)</h2>
+<div class="card">
+  <ul>
+    <li>Fees / service-charge ledger</li>
+    <li>Bilingual (AR/EN)</li>
+    <li>E-vote support</li>
+    <li>Six-month ADREC-oriented export</li>
+    <li><strong>Not</strong> payments rail or full IFM suite in v1</li>
+    <li>AI out of critical path</li>
+  </ul>
+</div>
+
+<h2>Why WATCH fits</h2>
+<div class="card">
+  <ul>
+    <li>Regulatory spine is now Proven. Demand and buyer denominator are not.</li>
+    <li>Illustrative SAM / ARR in the IC pack are Estimates. Ignore hockey sticks.</li>
+    <li>T01 stays WATCH: Project 360 + crowded escrow/developer OS.</li>
+    <li>Competitor triad tearsheet is running as review input, not a green light.</li>
+  </ul>
+</div>
+
+<h2>Key excerpts (tap to expand)</h2>
+<details open>
+  <summary>Referee capital test</summary>
+  <p>Would fund a cheap discovery option (licence list, Soft text hunt, interviews, teardown, E063 monitor). Would <strong>not</strong> fund bilingual multi-tenant ledger before A01/A02 move. Best use of a bounded validation tranche only if product spend stays behind existential tests.</p>
+</details>
+<details>
+  <summary>Red D1 — don’t front-load MVP</summary>
+  <p>A “PILOT” that hires eng in days 0–30 before E051 magnitude and A01 interview consensus is a mini-BUILD. Prefer WATCH + discovery budget over bundled PILOT.</p>
+</details>
+<details>
+  <summary>Pubs-first</summary>
+  <p>Primary PDFs for Decisions 24/25/26/165 found on DMT Legal Portal. E051 management-company list <strong>not found</strong>. Gazette issue IDs not found.</p>
+</details>
+
+<p class="footer">Draft for Shayan only. Digests separate HTML also building. Sources under the UAE property run folder. No Brand · no publish without explicit yes.</p>
+
+<script>
+const narrow = matchMedia('(max-width:639px)').matches;
+Chart.defaults.color = '#a8b4c4';
+Chart.defaults.borderColor = '#243041';
+Chart.defaults.responsive = true;
+Chart.defaults.maintainAspectRatio = false;
+new Chart(document.getElementById('scoreChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Stage 1', 'Underwriter', 'Referee'],
+    datasets: [{
+      label: 'Score /100',
+      data: [87, 55, 46],
+      backgroundColor: ['#5b9fd4', '#e0b45c', '#e07a6a']
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true, max: 100 } }
+  }
+});
+new Chart(document.getElementById('evChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Proven', 'Soft', 'Unknown'],
+    datasets: [{
+      data: [10, 44, 9],
+      backgroundColor: ['#3dbe8c', '#e0b45c', '#c4a0e0']
+    }]
+  },
+  options: {
+    plugins: { legend: { position: narrow ? 'bottom' : 'right' } }
+  }
+});
+</script>
+</body>
+</html>

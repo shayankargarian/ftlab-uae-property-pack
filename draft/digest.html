@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0e12" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>DRAFT · UAE Property Industry Digest · Shayan only</title>
+  <meta name="description" content="Private draft industry digest for Shayan. Not public. Not for Brand. Run 2026-09-13-uae-property." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+/* Digests site — private draft industry desk (mobile-first)
+   Aesthetic mirrors ../site/ but SEPARATE report. No Brand / no publish. */
+:root {
+  --bg: #0c0e12;
+  --bg-elev: #141820;
+  --bg-card: #171c26;
+  --bg-card-hover: #1c2230;
+  --border: rgba(212, 175, 106, 0.14);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --text: #e8e6e1;
+  --text-muted: #b0aba0;
+  --text-dim: #8a857c;
+  --gold: #c9a227;
+  --gold-soft: #d4af6a;
+  --gold-dim: rgba(201, 162, 39, 0.18);
+  --teal: #3d9b8f;
+  --teal-soft: #5cb8ab;
+  --teal-dim: rgba(61, 155, 143, 0.16);
+  --risk: #c45c5c;
+  --risk-soft: #d47878;
+  --risk-dim: rgba(196, 92, 92, 0.16);
+  --watch: #8b7ec8;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+  --nav-h: 3.25rem;
+  --radius: 10px;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  --max: 1080px;
+  --pad-x: 1rem;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + var(--safe-t) + 0.75rem);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  background:
+    radial-gradient(900px 480px at 10% -10%, rgba(201, 162, 39, 0.07), transparent 55%),
+    radial-gradient(700px 400px at 90% 5%, rgba(61, 155, 143, 0.06), transparent 50%),
+    var(--bg);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: var(--safe-b);
+  position: relative;
+}
+
+/* Subtle DRAFT watermark */
+body::before {
+  content: "DRAFT";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 22vw, 12rem);
+  letter-spacing: 0.18em;
+  color: rgba(201, 162, 39, 0.035);
+  transform: rotate(-18deg);
+  user-select: none;
+}
+
+.nav, main, .footer, .draft-banner { position: relative; z-index: 1; }
+
+a { color: var(--gold-soft); text-decoration: none; }
+a:hover { color: var(--gold); text-decoration: underline; }
+
+code, .path {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 0.12em 0.4em;
+  color: var(--gold-soft);
+  word-break: break-word;
+}
+
+/* Draft banner */
+.draft-banner {
+  background: linear-gradient(90deg, rgba(201, 162, 39, 0.16), rgba(196, 92, 92, 0.12));
+  border-bottom: 1px solid rgba(201, 162, 39, 0.35);
+  padding: 0.65rem calc(var(--pad-x) + var(--safe-l));
+  padding-right: calc(var(--pad-x) + var(--safe-r));
+  font-size: 0.82rem;
+  color: var(--gold-soft);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.draft-banner strong {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+/* Nav — mobile first */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: calc(var(--nav-h) + var(--safe-t));
+  padding-top: var(--safe-t);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-left: calc(var(--pad-x) + var(--safe-l));
+  padding-right: calc(var(--pad-x) + var(--safe-r));
+  padding-bottom: 0.35rem;
+  background: rgba(12, 14, 18, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-brand {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--gold-soft);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  padding-top: 0.35rem;
+}
+
+.nav-brand span {
+  display: none;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  margin: 0 -0.15rem;
+  padding: 0.15rem 0.15rem 0.25rem;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: var(--gold-dim);
+  text-decoration: none;
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 calc(var(--pad-x) + var(--safe-l)) 3.5rem calc(var(--pad-x) + var(--safe-r));
+}
+
+section {
+  padding: 2.25rem 0 1.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+section:last-of-type { border-bottom: none; }
+
+.section-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.65rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+h1 { font-size: clamp(1.75rem, 7vw, 2.4rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.35rem, 4.5vw, 1.85rem); }
+h3 { font-size: 1.05rem; font-family: var(--font-sans); font-weight: 600; }
+
+.lede {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 42rem;
+  margin: 0 0 1.25rem;
+}
+
+.hero {
+  padding-top: 1.75rem;
+  padding-bottom: 2rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1rem 0 1.35rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--gold-soft);
+}
+.badge.hold { border-color: rgba(201, 162, 39, 0.45); background: var(--gold-dim); color: var(--gold); }
+.badge.teal { border-color: rgba(61, 155, 143, 0.4); background: var(--teal-dim); color: var(--teal-soft); }
+.badge.muted { color: var(--text-muted); border-color: var(--border-subtle); }
+.badge.risk { border-color: rgba(196, 92, 92, 0.4); background: var(--risk-dim); color: var(--risk-soft); }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+  box-shadow: var(--shadow);
+}
+.stat-card .kicker { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.4rem; }
+.stat-card .value { font-family: var(--font-serif); font-size: clamp(1.25rem, 4vw, 1.65rem); color: var(--gold-soft); margin-bottom: 0.35rem; }
+.stat-card .detail { font-size: 0.9rem; color: var(--text-muted); }
+
+.card-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+@media (hover: hover) {
+  .card:hover { border-color: var(--border); background: var(--bg-card-hover); }
+}
+.card.highlight {
+  border-color: rgba(201, 162, 39, 0.35);
+  background: linear-gradient(160deg, rgba(201, 162, 39, 0.08), var(--bg-card) 55%);
+}
+.card.teal-card {
+  border-color: rgba(61, 155, 143, 0.32);
+  background: linear-gradient(160deg, rgba(61, 155, 143, 0.08), var(--bg-card) 55%);
+}
+.card p { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
+.card h3 { margin-bottom: 0.45rem; }
+.card .emirate-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.65rem;
+  background: var(--gold-dim);
+  color: var(--gold-soft);
+}
+.card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.card ul li { margin-bottom: 0.4rem; }
+
+.decision-callouts {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.decision-pill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+}
+.decision-pill .code {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  white-space: nowrap;
+  min-width: 7.5rem;
+}
+.decision-pill .body {
+  flex: 1;
+  min-width: 12rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.decision-pill .body strong { color: var(--text); }
+
+.chart-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1rem 1rem 1.25rem;
+  margin: 1rem 0;
+}
+.chart-wrap h3 { margin-bottom: 0.25rem; }
+.chart-caption {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin: 0 0 0.85rem;
+}
+.chart-box {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  max-width: 100%;
+}
+.chart-box.tall { height: 300px; }
+.chart-box.short { height: 220px; }
+
+.charts-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.mermaid-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1rem 0.65rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.mermaid {
+  display: flex;
+  justify-content: center;
+  min-width: min(100%, 18rem);
+}
+.mermaid svg { max-width: 100%; height: auto; }
+
+.ev {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+.ev.proven { background: var(--teal-dim); color: var(--teal-soft); }
+.ev.soft { background: var(--gold-dim); color: var(--gold-soft); }
+.ev.unknown { background: var(--risk-dim); color: var(--risk-soft); }
+
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  max-width: 100%;
+}
+table {
+  width: 100%;
+  min-width: 20rem;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+th {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: var(--bg-elev);
+  font-weight: 600;
+}
+tr:last-child td { border-bottom: none; }
+td { color: var(--text-muted); }
+td.gap-name { color: var(--text); font-weight: 500; width: 28%; }
+
+.callout {
+  border-left: 3px solid var(--gold);
+  background: var(--gold-dim);
+  padding: 0.85rem 1rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1rem 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.callout.risk { border-left-color: var(--risk); background: var(--risk-dim); }
+.callout.teal { border-left-color: var(--teal); background: var(--teal-dim); }
+.callout strong { color: var(--gold-soft); }
+.callout.risk strong { color: var(--risk-soft); }
+.callout.teal strong { color: var(--teal-soft); }
+
+.footer {
+  margin-top: 1.5rem;
+  padding: 2rem calc(var(--pad-x) + var(--safe-l));
+  padding-bottom: calc(2rem + var(--safe-b));
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+.footer .brand {
+  font-family: var(--font-serif);
+  color: var(--gold-soft);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+.footer .paths {
+  text-align: left;
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.footer .paths li { margin-bottom: 0.3rem; word-break: break-all; }
+
+ul.clean {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+ul.clean li { margin-bottom: 0.45rem; }
+
+.actor-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+.actor-row {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+}
+.actor-row strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gold-soft);
+  margin-bottom: 0.25rem;
+}
+.actor-row span { font-size: 0.9rem; color: var(--text-muted); }
+
+.update-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.update-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+}
+.update-item .status {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.update-item .status.found { background: var(--teal-dim); color: var(--teal-soft); }
+.update-item .status.notfound { background: var(--risk-dim); color: var(--risk-soft); }
+.update-item .status.proven { background: var(--teal-dim); color: var(--teal-soft); }
+.update-item .status.soft { background: var(--gold-dim); color: var(--gold-soft); }
+.update-item .status.unknown { background: rgba(139, 126, 200, 0.18); color: #b0a5e0; }
+.update-item p { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
+.update-item p strong { color: var(--text); }
+
+@media (min-width: 640px) {
+  :root { --pad-x: 1.25rem; --nav-h: 3.5rem; }
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0;
+    height: calc(var(--nav-h) + var(--safe-t));
+    min-height: calc(var(--nav-h) + var(--safe-t));
+  }
+  .nav-brand { padding-top: 0; font-size: 1.15rem; }
+  .nav-brand span { display: inline; }
+  .nav-links {
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    min-height: 40px;
+    font-size: 0.78rem;
+    padding: 0.4rem 0.55rem;
+  }
+  .hero { padding-top: 2.75rem; padding-bottom: 2.5rem; }
+  .lede { font-size: 1.08rem; }
+  .chart-box { height: 280px; }
+  .chart-box.tall { height: 340px; }
+  .chart-box.short { height: 240px; }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); }
+  h2 { font-size: clamp(1.55rem, 3vw, 2.05rem); }
+  h3 { font-size: 1.15rem; }
+  section { padding: 3rem 0 2.25rem; }
+  .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .actor-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .hero-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .charts-row { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .decision-callouts { grid-template-columns: repeat(2, 1fr); }
+  .chart-box { height: 300px; }
+  .chart-box.tall { height: 360px; }
+  .chart-box.short { height: 250px; }
+  .chart-wrap { padding: 1.25rem 1.35rem 1.5rem; }
+  table { font-size: 0.9rem; }
+  th, td { padding: 0.75rem 1rem; }
+  .update-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  main { padding-bottom: 4rem; }
+}
+
+@media print {
+  :root { --bg: #fff; --text: #111; --text-muted: #444; --bg-card: #f7f7f5; --bg-elev: #eee; }
+  body { background: #fff; color: #111; }
+  body::before { color: rgba(0,0,0,0.04); }
+  .nav { position: static; background: #fff; }
+  .draft-banner { background: #fff8e6; color: #664d00; }
+  .chart-wrap, .card, .stat-card { box-shadow: none; break-inside: avoid; }
+  a { color: #333; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .nav-links a { transition: none; }
+}
+
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
+  <script>
+/* Digests site — private draft industry desk charts + mermaid */
+(function () {
+  "use strict";
+
+  /* Recomputed 2026-09-14 from evidence-ledger.csv strength column */
+  const LEDGER = {
+    Proven: 10,
+    Soft: 44,
+    Unknown: 9,
+    n: 63,
+    source: "evidence-ledger.csv",
+    note: "Live counts from run ledger after Claim Verifier Soft→Proven on E067/E068 (13 Sep)."
+  };
+
+  const GAP_THEMES = {
+    labels: [
+      "Compliance / escrow / strata",
+      "Ops / leasing / handover",
+      "Data / valuation / intel",
+      "Construction / documents"
+    ],
+    values: [3, 3, 2, 2],
+    caption: "10 persistent gaps grouped by theme from digest-structural-gaps."
+  };
+
+  window.DIGEST_DATA = { LEDGER, GAP_THEMES };
+
+  const gold = "#c9a227";
+  const goldSoft = "#d4af6a";
+  const teal = "#3d9b8f";
+  const tealSoft = "#5cb8ab";
+  const risk = "#c45c5c";
+  const muted = "#9a968c";
+  const grid = "rgba(255,255,255,0.05)";
+  const tick = "#6b6760";
+
+  function basePlugins() {
+    return {
+      legend: {
+        labels: {
+          color: muted,
+          font: { family: "'DM Sans', sans-serif", size: 12 },
+          boxWidth: 12,
+          padding: 14
+        }
+      },
+      tooltip: {
+        backgroundColor: "rgba(20,24,32,0.95)",
+        titleColor: goldSoft,
+        bodyColor: "#e8e6e1",
+        borderColor: "rgba(212,175,106,0.25)",
+        borderWidth: 1,
+        cornerRadius: 8,
+        padding: 10
+      }
+    };
+  }
+
+  function renderStrengthDoughnut() {
+    const el = document.getElementById("chart-strength");
+    if (!el || typeof Chart === "undefined") return;
+    new Chart(el, {
+      type: "doughnut",
+      data: {
+        labels: ["Proven", "Soft", "Unknown"],
+        datasets: [{
+          data: [LEDGER.Proven, LEDGER.Soft, LEDGER.Unknown],
+          backgroundColor: [teal, gold, risk],
+          borderColor: "#0c0e12",
+          borderWidth: 3,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "58%",
+        plugins: {
+          ...basePlugins(),
+          legend: {
+            position: "bottom",
+            labels: {
+              color: muted,
+              font: { family: "'DM Sans', sans-serif", size: 12 },
+              boxWidth: 12,
+              padding: 16
+            }
+          }
+        }
+      }
+    });
+  }
+
+  function renderGapBars() {
+    const el = document.getElementById("chart-gaps");
+    if (!el || typeof Chart === "undefined") return;
+    new Chart(el, {
+      type: "bar",
+      data: {
+        labels: GAP_THEMES.labels,
+        datasets: [{
+          label: "Gaps",
+          data: GAP_THEMES.values,
+          backgroundColor: "rgba(201, 162, 39, 0.55)",
+          borderColor: goldSoft,
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: "y",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          ...basePlugins(),
+          legend: { display: false }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 4,
+            ticks: {
+              stepSize: 1,
+              color: tick,
+              font: { family: "'DM Sans', sans-serif", size: 11 }
+            },
+            grid: { color: grid }
+          },
+          y: {
+            ticks: {
+              color: muted,
+              font: { family: "'DM Sans', sans-serif", size: 11 }
+            },
+            grid: { display: false }
+          }
+        }
+      }
+    });
+  }
+
+  function fillLedgerStats() {
+    const proven = document.getElementById("stat-proven");
+    const soft = document.getElementById("stat-soft");
+    const unknown = document.getElementById("stat-unknown");
+    const total = document.getElementById("stat-total");
+    if (proven) proven.textContent = String(LEDGER.Proven);
+    if (soft) soft.textContent = String(LEDGER.Soft);
+    if (unknown) unknown.textContent = String(LEDGER.Unknown);
+    if (total) total.textContent = String(LEDGER.n);
+  }
+
+  function initMermaid() {
+    if (typeof mermaid === "undefined") return;
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "dark",
+      securityLevel: "loose",
+      flowchart: {
+        htmlLabels: true,
+        curve: "basis",
+        padding: 12,
+        nodeSpacing: 28,
+        rankSpacing: 36
+      },
+      themeVariables: {
+        darkMode: true,
+        background: "#171c26",
+        primaryColor: "#1c2230",
+        primaryTextColor: "#e8e6e1",
+        primaryBorderColor: "#c9a227",
+        lineColor: "#d4af6a",
+        secondaryColor: "#141820",
+        tertiaryColor: "#0c0e12",
+        fontFamily: "DM Sans, sans-serif"
+      }
+    });
+  }
+
+  function markActiveNav() {
+    const links = document.querySelectorAll(".nav-links a");
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    const map = new Map();
+    links.forEach((a) => {
+      const id = a.getAttribute("href");
+      if (id && id.startsWith("#")) {
+        const section = document.querySelector(id);
+        if (section) map.set(section, a);
+      }
+    });
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const a = map.get(entry.target);
+          if (!a) return;
+          if (entry.isIntersecting) {
+            links.forEach((l) => l.classList.remove("active"));
+            a.classList.add("active");
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+    );
+    map.forEach((_, section) => io.observe(section));
+  }
+
+  function boot() {
+    fillLedgerStats();
+    initMermaid();
+    renderStrengthDoughnut();
+    renderGapBars();
+    markActiveNav();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+
+</script>
+</head>
+<body>
+  <div class="draft-banner" role="status">
+    <strong>DRAFT</strong> · not public · Shayan leave-draft 2026-09-14 · no Brand · <code>draft_needs_approval</code>
+  </div>
+
+  <nav class="nav" aria-label="Sections">
+    <div class="nav-brand">Industry digest <span>UAE property · private</span></div>
+    <div class="nav-links">
+      <a href="#overview">Overview</a>
+      <a href="#system-map">System map</a>
+      <a href="#gaps">Gaps</a>
+      <a href="#regulatory">Regulatory</a>
+      <a href="#publications">Publications</a>
+      <a href="#pubs-first">Pubs-first</a>
+      <a href="#negative-space">Negative space</a>
+      <a href="#sources">Sources</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="overview">
+      <span class="section-label">Industry desk · draft</span>
+      <h1>UAE property<br />industry digest</h1>
+      <p class="lede">IC-stripped desk report of the value chain, structural gaps, regulatory instruments, and Soft vs Proven publications from run <code>2026-09-13-uae-property</code>. Australian English. Local viewing only.</p>
+      <div class="hero-meta">
+        <span class="badge hold">DRAFT · not public</span>
+        <span class="badge muted">Shayan leave-draft 2026-09-14</span>
+        <span class="badge risk">no Brand</span>
+        <span class="badge teal">pubs-first Verifier 13 Sep</span>
+        <span class="badge muted">run 2026-09-13-uae-property</span>
+      </div>
+      <div class="hero-grid">
+        <div class="stat-card">
+          <div class="kicker">Ledger · Proven</div>
+          <div class="value" id="stat-proven">10</div>
+          <div class="detail">Primary statutes, Decisions, and official bulletins accepted on the evidence ledger.</div>
+        </div>
+        <div class="stat-card">
+          <div class="kicker">Ledger · Soft</div>
+          <div class="value" id="stat-soft">44</div>
+          <div class="detail">Press, counsel, broker, and secondary chains. Includes E084 (28 Feb calendar date).</div>
+        </div>
+        <div class="stat-card">
+          <div class="kicker">Ledger · Unknown</div>
+          <div class="value" id="stat-unknown">9</div>
+          <div class="detail">Open items including E051 management-company list and E063 free tooling. n=<span id="stat-total">63</span>.</div>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:1.35rem">
+        <strong>Reading rules.</strong> Prefer primary publications over press and counsel. Decision 25/26 operative obligations are <span class="ev proven">Proven</span> (E067, E068) after Claim Verifier accepted primary PDFs. The 28 Feb 2026 effective-date claim stays <span class="ev soft">Soft</span> (E084).
+      </div>
+    </section>
+
+    <section id="system-map">
+      <span class="section-label">1 · Value chain</span>
+      <h2>System map</h2>
+      <p class="lede">Compressed industry map from <code>digest-system-map.md</code> (source <code>02-industry-system-map.md</code>). Mobile flowchart TB.</p>
+
+      <div class="mermaid-wrap">
+        <pre class="mermaid">
+flowchart TB
+  L[Land / master planning] --> D[Development / construction]
+  D --> O[Off-plan sales and escrow]
+  O --> T[Title registration]
+  T --> B[Brokerage and leasing]
+  B --> M[Mortgage / finance]
+  M --> F[Occupancy and FM]
+  F --> A[Asset management / valuation]
+  A --> C[Capital markets]
+  C --> R[Redevelopment]
+        </pre>
+      </div>
+
+      <h3>Actor layers</h3>
+      <div class="actor-list">
+        <div class="actor-row">
+          <strong>Land and planning</strong>
+          <span>Sovereign landowners; master developers; free-zone authorities; municipal planning (Dubai Municipality, DMT, Sharjah).</span>
+        </div>
+        <div class="actor-row">
+          <strong>Construction</strong>
+          <span>Main contractors, MEP, progress certifiers who unlock escrow.</span>
+        </div>
+        <div class="actor-row">
+          <strong>Regulation and title</strong>
+          <span>Dubai DLD / RERA / Oqood / Ejari; Abu Dhabi ADREC / DMT / DARI; Sharjah SRERD plus escrow reforms.</span>
+        </div>
+        <div class="actor-row">
+          <strong>Demand generation</strong>
+          <span>Listing portals; brokerages; conveyancers; bank valuation panels.</span>
+        </div>
+        <div class="actor-row">
+          <strong>Capital</strong>
+          <span>Retail / HNW buyers; mortgage banks; family offices; DIFC / ADGM managers.</span>
+        </div>
+        <div class="actor-row">
+          <strong>Operations</strong>
+          <span>FM firms; owners’ associations / committees; property managers; BMS / IoT vendors.</span>
+        </div>
+        <div class="actor-row">
+          <strong>Data and software</strong>
+          <span>DLD open data (strongest); portal data; escrow ledgers; local PropTech; global PM / construction suites with localisation gaps.</span>
+        </div>
+      </div>
+
+      <div class="callout teal" style="margin-top:1.25rem">
+        <strong>Bottlenecks that matter for software.</strong> Escrow-construction progress coupling; handover / snagging when off-plan share is high; fragmented mid-market leasing; cross-emirate rule fragmentation; thin institutional data outside Dubai residential; service-charge / OC governance (explicitly targeted by Abu Dhabi Decisions 25/26).
+      </div>
+      <p class="lede" style="margin-top:1rem;margin-bottom:0">Money concentrates in land / development uplift and portals / brokerage. Software pools are smaller but grow with handover volume and compliance complexity.</p>
+    </section>
+
+    <section id="gaps">
+      <span class="section-label">2 · Structural gaps</span>
+      <h2>Where the industry still improvises</h2>
+      <p class="lede">Persistent gaps from <code>digest-structural-gaps.md</code>. Descriptive only. No build language.</p>
+
+      <div class="chart-wrap">
+        <h3>Gap count by theme</h3>
+        <p class="chart-caption">10 persistent gaps grouped into four themes (n=10).</p>
+        <div class="chart-box tall"><canvas id="chart-gaps" aria-label="Horizontal bar chart of structural gaps by theme"></canvas></div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Gap</th>
+              <th>Who feels it</th>
+              <th>Typical workaround</th>
+              <th>Why it persists</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="gap-name">Escrow + construction progress opacity</td>
+              <td>Buyers, developers, banks</td>
+              <td>Bank portals, spreadsheets, manual certificates</td>
+              <td>Multi-party incentives; bank IT</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Service-charge / strata governance</td>
+              <td>Owners, OCs, developers</td>
+              <td>Management companies; disputes; PDF budgets</td>
+              <td>Weak standards until AD Decisions 25/26</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Mid-market leasing ops</td>
+              <td>Landlords, SM agents</td>
+              <td>WhatsApp, Excel, Ejari / Tawtheeq portals</td>
+              <td>Historically cheap labour; tool sprawl</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Industrial / logistics market intelligence</td>
+              <td>Occupiers, investors, brokers</td>
+              <td>Broker research PDFs</td>
+              <td>No CoStar-class public comps</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Construction productivity / claims</td>
+              <td>Developers, contractors</td>
+              <td>Legacy PM; consultants</td>
+              <td>Fragmented trades; low digitisation</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Cross-emirate compliance</td>
+              <td>Multi-emirate owners, funds</td>
+              <td>Law firms, internal checklists</td>
+              <td>Emirate sovereignty (DLD ≠ ADREC ≠ Sharjah)</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Valuation quality outside prime residential</td>
+              <td>Banks, funds</td>
+              <td>Panel valuers; thin AVMs</td>
+              <td>Data scarcity</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Green building ops vs design certificates</td>
+              <td>Owners, municipalities</td>
+              <td>Al Sa'fat / Estidama design stamps</td>
+              <td>Capex vs opex split</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Snagging / handover at scale</td>
+              <td>Developers, buyers</td>
+              <td>Manual lists, subcontractors</td>
+              <td>Cyclical neglect when off-plan share is high</td>
+            </tr>
+            <tr>
+              <td class="gap-name">Arabic document automation</td>
+              <td>Legal, sales, banks</td>
+              <td>Manual bilingual review</td>
+              <td>NLP maturity still catching contracts</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout" style="margin-top:1.25rem">
+        <strong>Regulatory pressure (descriptive).</strong> Abu Dhabi Decisions 24/25/26/165 (2025) raise the bar on escrow early release, jointly owned property management systems, owners’ committees, and cancel / resale refunds. Dubai escrow / RERA remains the deepest institutional process layer. Sharjah escrow is maturing after Res. 37/2024; enforcement KPIs remain thin in open sources.
+      </div>
+    </section>
+
+    <section id="regulatory">
+      <span class="section-label">3 · Instruments</span>
+      <h2>Regulatory instruments</h2>
+      <p class="lede">Dubai / Abu Dhabi / Sharjah instruments most relevant to ops, escrow, and strata software. Strengths follow the evidence ledger after Verifier 13 Sep.</p>
+
+      <div class="card-grid cols-3">
+        <div class="card highlight">
+          <span class="emirate-tag">Dubai</span>
+          <h3>DLD / RERA stack</h3>
+          <ul>
+            <li>Law No. 8/2007 escrow <span class="ev proven">Proven</span> E008</li>
+            <li>Law No. 16/2007 RERA <span class="ev proven">Proven</span> E009</li>
+            <li>Al Sa'fat Admin Res. 154/2020 <span class="ev proven">Proven</span> E010</li>
+            <li>Mollak / service-charge practice · aggregate collections <span class="ev unknown">Unknown</span> E079</li>
+            <li>Initial Registration / Project 360 (2026-09-03) <span class="ev proven">Proven</span> E070</li>
+          </ul>
+        </div>
+        <div class="card teal-card">
+          <span class="emirate-tag">Abu Dhabi</span>
+          <h3>ADREC / DMT package</h3>
+          <ul>
+            <li>Law 3/2015 as amended by Law 2/2025 <span class="ev soft">Soft</span> E011</li>
+            <li>Decision 24/2025 early escrow · PDF on shelf <span class="ev soft">Soft</span> E013</li>
+            <li>Decision 25/2025 operative obligations <span class="ev proven">Proven</span> E067</li>
+            <li>Decision 26/2025 OC bylaws <span class="ev proven">Proven</span> E068</li>
+            <li>Decision 165/2025 cancel / resale · package via E012 <span class="ev proven">Proven</span></li>
+            <li>DARI digital ecosystem · mgmt-co list <span class="ev unknown">Unknown</span> E051</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="emirate-tag">Sharjah</span>
+          <h3>Escrow pathway</h3>
+          <ul>
+            <li>Executive Council Res. 37/2024 <span class="ev soft">Soft</span> E041</li>
+            <li>Escrow system go-live (reported Jan 2026 / ACRES) <span class="ev soft">Soft</span> E071</li>
+            <li>Enforcement KPIs <span class="ev unknown">Unknown</span> E080</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:1.75rem">Decision callouts 24 / 25 / 26 / 165</h3>
+      <div class="decision-callouts">
+        <div class="decision-pill">
+          <div class="code">Decision 24/2025</div>
+          <div class="body"><strong>Early escrow disbursement</strong> controls before 20% completion. Primary PDF on shelf (SRC-P04). Ledger E013 still Soft until operative bank-guarantee clauses are quoted.</div>
+        </div>
+        <div class="decision-pill">
+          <div class="code">Decision 25/2025</div>
+          <div class="body"><strong>Jointly owned property.</strong> Art.20(6) 30-day Centre-accredited management-company appointment; Art.23(4) six-month ADREC reports; Art.24 electronic management / accounting. <span class="ev proven">Proven</span> E067. Effective date from Gazette (Art.45), not 28 Feb.</div>
+        </div>
+        <div class="decision-pill">
+          <div class="code">Decision 26/2025</div>
+          <div class="body"><strong>Unified Owners’ Committee bylaws.</strong> Formation at ≥30% multi-owned units; 5-9 resident members; developer excluded; electronic voting, one vote per participating owner. <span class="ev proven">Proven</span> E068.</div>
+        </div>
+        <div class="decision-pill">
+          <div class="code">Decision 165/2025</div>
+          <div class="body"><strong>Compensation / refund timelines</strong> on cancelled and resold off-plan units. Package announcement Proven via E012; primary PDF on shelf (SRC-P05).</div>
+        </div>
+      </div>
+
+      <p class="lede" style="margin-top:1.25rem;margin-bottom:0">Cross-cutting: PDPL Decree-Law 45/2021 (owner-portal design constraint); Emiratisation labour rules (indirect FM productivity pressure).</p>
+    </section>
+
+    <section id="publications">
+      <span class="section-label">4 · Soft vs Proven</span>
+      <h2>Publications</h2>
+      <p class="lede">Statutes / Decisions / official bulletins versus Soft press, counsel, or broker chains. Counts recomputed from <code>evidence-ledger.csv</code>.</p>
+
+      <div class="charts-row">
+        <div class="chart-wrap">
+          <h3>Evidence strength mix</h3>
+          <p class="chart-caption">Proven 10 · Soft 44 · Unknown 9 · n=63 (ledger strength column)</p>
+          <div class="chart-box short"><canvas id="chart-strength" aria-label="Doughnut of Proven Soft Unknown"></canvas></div>
+        </div>
+        <div class="card-grid" style="align-content:start;gap:0.75rem">
+          <div class="card highlight">
+            <h3>Honesty note</h3>
+            <p>Finding Decision PDFs upgrades availability of primary text. Ledger rows flip only when Claim Verifier accepts quotes. E067 and E068 are now Proven on operative obligations. E084 (28 Feb) stays Soft counsel.</p>
+          </div>
+          <div class="card">
+            <h3>What “Proven” means here</h3>
+            <p>Primary PDF, official bulletin, or Media Office release on the shelf with Verifier acceptance. Soft = secondary chain. Unknown = not found or not inventable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Primary</th>
+              <th>Soft chain</th>
+              <th>Strength</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dubai escrow</td>
+              <td>Law No. 8/2007 PDF</td>
+              <td>-</td>
+              <td><span class="ev proven">Proven</span> E008</td>
+            </tr>
+            <tr>
+              <td>Dubai RERA</td>
+              <td>Law No. 16/2007</td>
+              <td>-</td>
+              <td><span class="ev proven">Proven</span> E009</td>
+            </tr>
+            <tr>
+              <td>Dubai Al Sa'fat</td>
+              <td>Admin Res. 154/2020</td>
+              <td>-</td>
+              <td><span class="ev proven">Proven</span> E010</td>
+            </tr>
+            <tr>
+              <td>Dubai sales / off-plan volumes</td>
+              <td>Dubai Pulse exists (cite Soft)</td>
+              <td>Zawya / Gulf News / TruHauz</td>
+              <td><span class="ev soft">Soft</span> E001-E006</td>
+            </tr>
+            <tr>
+              <td>DLD Project 360</td>
+              <td>Dubai Media Office 2026-09-03</td>
+              <td>Trade press</td>
+              <td><span class="ev proven">Proven</span> E070</td>
+            </tr>
+            <tr>
+              <td>AD Decision package announced</td>
+              <td>Media Office 2026-03-27</td>
+              <td>Counsel round-ups</td>
+              <td><span class="ev proven">Proven</span> E012</td>
+            </tr>
+            <tr>
+              <td>Decision 25 operative</td>
+              <td>Primary PDF DMT Legal Portal</td>
+              <td>BSA / Trowers / Lexis (28 Feb Soft)</td>
+              <td><span class="ev proven">Proven</span> E067</td>
+            </tr>
+            <tr>
+              <td>Decision 26 OC bylaws</td>
+              <td>Primary PDF DMT Legal Portal</td>
+              <td>Trowers / BLK</td>
+              <td><span class="ev proven">Proven</span> E068</td>
+            </tr>
+            <tr>
+              <td>Decision 24 early escrow</td>
+              <td>Primary PDF on shelf</td>
+              <td>K&amp;S / counsel</td>
+              <td><span class="ev soft">Soft</span> E013</td>
+            </tr>
+            <tr>
+              <td>Decision 165 cancel / resale</td>
+              <td>Primary PDF on shelf</td>
+              <td>Media Office summary</td>
+              <td><span class="ev proven">Proven</span> via E012</td>
+            </tr>
+            <tr>
+              <td>AD Law 3/2015 / Law 2/2025</td>
+              <td>Amended PDF not on shelf</td>
+              <td>ADREC / firm summaries</td>
+              <td><span class="ev soft">Soft</span> E011</td>
+            </tr>
+            <tr>
+              <td>ADREC YE2025 / H1 2026</td>
+              <td>ADREC / Media Office releases</td>
+              <td>-</td>
+              <td><span class="ev proven">Proven</span> E065, E066, E069</td>
+            </tr>
+            <tr>
+              <td>ADREC management-company headcount</td>
+              <td><strong>Not found</strong></td>
+              <td>-</td>
+              <td><span class="ev unknown">Unknown</span> E051</td>
+            </tr>
+            <tr>
+              <td>Sharjah escrow pathway</td>
+              <td>Res. 37/2024 (secondary cite)</td>
+              <td>Khaleej Times / BSA / Tamimi</td>
+              <td><span class="ev soft">Soft</span> E041, E071</td>
+            </tr>
+            <tr>
+              <td>Decision 25 effective 28 Feb 2026</td>
+              <td>Not in primary Art.45</td>
+              <td>BSA counsel only</td>
+              <td><span class="ev soft">Soft</span> E084</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pubs-first">
+      <span class="section-label">5 · Pubs-first update</span>
+      <h2>What the primary hunt changed</h2>
+      <p class="lede">From <code>research/pubs-first-findings.md</code> and Claim Verifier Soft→Proven audit (13 Sep). Corrected vs older digest Soft labels on E067 / E068.</p>
+
+      <div class="update-grid">
+        <div class="update-item">
+          <span class="status found">FOUND</span>
+          <p><strong>Decision 24 / 25 / 26 / 165 primary PDFs</strong> on DMT Legal Portal (<code>dmtlegislationhub.dmt.gov.ae</code>). Shelved under <code>research/sources/DMT-Decision-*-2025-legislationhub.pdf</code>.</p>
+        </div>
+        <div class="update-item">
+          <span class="status notfound">NOT FOUND</span>
+          <p><strong>E051</strong> ADREC-accredited management company list / count. Directory professions omit the category (~5,050 records; Broker / Evaluator / Auctioneer / Surveyor / Account trustees / Developer only).</p>
+        </div>
+        <div class="update-item">
+          <span class="status proven">Proven</span>
+          <p><strong>E067</strong> Soft→Proven (Verifier 13 Sep). Art.20(6) 30-day appointment; Art.23(4) six-month reports; Art.24 electronic management / accounting only.</p>
+        </div>
+        <div class="update-item">
+          <span class="status proven">Proven</span>
+          <p><strong>E068</strong> Soft→Proven (Verifier 13 Sep). ≥30% formation; 5-9 members; developer excluded; e-voting / one vote (Decision 26 Arts.2-5).</p>
+        </div>
+        <div class="update-item">
+          <span class="status soft">Soft</span>
+          <p><strong>E084</strong> 28 Feb 2026 calendar date remains Soft counsel. Primary Art.45: effective from Official Gazette publication. Gazette issue IDs not found / not invented.</p>
+        </div>
+        <div class="update-item">
+          <span class="status unknown">Unknown</span>
+          <p><strong>E063</strong> No primary evidence of a complete free ADREC Decision 25 software suite. Monitor item only.</p>
+        </div>
+      </div>
+
+      <div class="callout risk" style="margin-top:1.25rem">
+        <strong>Do not conflate.</strong> Package announcement (E012) is Proven. Operative Decision 25/26 obligations (E067/E068) are Proven. The 28 Feb date (E084) is Soft. Management-company SAM (E051) is Unknown.
+      </div>
+    </section>
+
+    <section id="negative-space">
+      <span class="section-label">6 · Negative space</span>
+      <h2>What should exist but mostly does not</h2>
+      <p class="lede">From the structural gap digest. Observational list for the industry desk.</p>
+      <ul class="clean">
+        <li>Investor cockpit spanning DLD + ADREC portfolios (service charges, tenancy, insurance).</li>
+        <li>Public, queryable industrial lease comps.</li>
+        <li>Escrow milestone API usable by contractors, insurers, and software vendors.</li>
+        <li>OC / OA treasury with statutory reporting matching Abu Dhabi’s unified bylaws.</li>
+        <li>Progress-certified photo ledger acceptable to banks / regulators.</li>
+        <li>Secondary market for verified broker performance (still informal reputation).</li>
+      </ul>
+      <div class="callout" style="margin-top:1.25rem">
+        <strong>Localisation note.</strong> Heavy imports: global PM suites, BMS hardware, construction software cores. Localisable surfaces: escrow logic, service-charge statutory forms, Arabic UX, industrial data aggregation, bilingual document AI.
+      </div>
+    </section>
+
+    <section id="sources">
+      <span class="section-label">7 · Sources</span>
+      <h2>Markdown sources for this draft</h2>
+      <p class="lede">Attach-ready HTML mirrors these IC-stripped digests. Status remains <code>draft_needs_approval</code>.</p>
+      <ul class="clean">
+        <li><code>digests/DIGEST-README.md</code></li>
+        <li><code>digests/digest-system-map.md</code></li>
+        <li><code>digests/digest-regulatory.md</code></li>
+        <li><code>digests/digest-structural-gaps.md</code></li>
+        <li><code>digests/digest-publications.md</code></li>
+        <li><code>research/pubs-first-findings.md</code></li>
+        <li><code>verify-soft-to-proven-decisions.md</code></li>
+        <li><code>evidence-ledger.csv</code> (strength counts recomputed)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand">draft_needs_approval</div>
+    <p>Private draft for Shayan · leave-draft 2026-09-14 · not public · no Brand · no GitHub Pages publish</p>
+    <p>Run <code>2026-09-13-uae-property</code> · industry desk only · Australian English</p>
+    <ul class="paths clean">
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/digests/site/index.html</li>
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/digests/DIGEST-README.md</li>
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/digests/digest-system-map.md</li>
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/digests/digest-regulatory.md</li>
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/digests/digest-structural-gaps.md</li>
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/digests/digest-publications.md</li>
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/research/pubs-first-findings.md</li>
+      <li>/workspace/ftlab-venture-pipeline/runs/2026-09-13-uae-property/evidence-ledger.csv</li>
+    </ul>
+  </footer>
+</body>
+</html>
