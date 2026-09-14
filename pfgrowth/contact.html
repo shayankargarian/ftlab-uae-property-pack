@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect | PF Growth redesign</title>
+  <meta name="description" content="Contact Partners for Growth. Offices and enquiry form prototype.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">PF <span>Growth</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="growth-debt.html">Growth debt</a></li>
+          <li><a href="portfolio.html">Proof</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Connect</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary header-cta" href="contact.html">Talk to us</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Connect</p>
+        <h1>Get to the right partner</h1>
+        <p class="lede muted" style="max-width:36rem">Borrower, LP, or press: tell us what you need and where you operate. This form is a prototype only (no live submission to PFG).</p>
+      </div>
+    </section>
+
+    <section class="section section-light" style="padding-top:1rem">
+      <div class="wrap split">
+        <div>
+          <h2>Enquiry</h2>
+          <div id="form-success" class="form-success" tabindex="-1" role="status">Thanks. In a live build this would reach the PFG team. Prototype only.</div>
+          <form class="form" id="lead-form" novalidate>
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="need">I am</label>
+              <select id="need" name="need" required>
+                <option value="">Select one</option>
+                <option>A company exploring growth debt</option>
+                <option>An investor or LP</option>
+                <option>Press / media</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="region">Primary region</label>
+              <select id="region" name="region" required>
+                <option value="">Select one</option>
+                <option>Australia &amp; New Zealand</option>
+                <option>Asia Pacific</option>
+                <option>North America</option>
+                <option>Latin America</option>
+                <option>Europe</option>
+                <option>Middle East &amp; North Africa</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" required placeholder="Revenue band, structure interest, timing…"></textarea>
+            </div>
+            <p class="form-note">Prototype form does not transmit data. For the live firm use channels on pfgrowth.com/connect/ or contact@pfgrowth.com.</p>
+            <button class="btn btn-dark" type="submit">Send enquiry</button>
+          </form>
+        </div>
+        <div>
+          <h2>Offices</h2>
+          <p class="section-intro">Public addresses from the live Connect page.</p>
+          <div class="grid-2" style="grid-template-columns:1fr">
+            <div class="card office">
+              <strong>San Francisco Bay Area</strong>
+              <address>1751 Tiburon Boulevard<br>Tiburon, CA 94920<br>United States</address>
+            </div>
+            <div class="card office">
+              <strong>Sydney</strong>
+              <address>Level 2, 50 Bridge Street<br>Sydney NSW 2000<br>Australia</address>
+            </div>
+            <div class="card office">
+              <strong>Boston</strong>
+              <address>855 Boylston Street, Suite 1000<br>Boston, MA 02116<br>United States</address>
+            </div>
+            <div class="card office">
+              <strong>Miami</strong>
+              <address>252 NW 29th St, #9<br>Miami, FL 33127<br>United States</address>
+            </div>
+            <div class="card office">
+              <strong>Dubai</strong>
+              <address>8th Floor, The Offices 4, One Central<br>Dubai World Trade Center</address>
+            </div>
+            <div class="card office">
+              <strong>São Paulo</strong>
+              <address>Alameda Vicente Pinzon, 54<br>Vila Olímpia, São Paulo, SP 04547-130<br>Brazil</address>
+            </div>
+          </div>
+          <p style="margin-top:1.25rem" class="muted">Email (public disclosures): <a href="mailto:contact@pfgrowth.com">contact@pfgrowth.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <div class="footer-brand">Partners for Growth</div>
+        <p class="draft-badge">Redesign prototype for review. Not the live pfgrowth.com site.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="growth-debt.html">Growth debt</a>
+        <a href="portfolio.html">Proof</a>
+        <a href="about.html">About</a>
+      </div>
+      <p>This is not an offer to sell securities. Live PFG materials are subject to important disclosures on pfgrowth.com.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
