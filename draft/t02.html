@@ -1,202 +1,1145 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<meta name="theme-color" content="#0b0f14"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<title>T02 Review — Draft · Private</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
-</script>
-<style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0e12" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>T02 Deep Review · DRAFT private</title>
+  <meta name="description" content="Private T02 deep review for Shayan. Abu Dhabi strata / OC finance OS. Human Gate: T01+T02 WATCH. Day 0 HOLD." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+/* T02 deep review - mobile-first dark (mirror IC pack quality) */
 :root {
-  --bg:#0b0f14; --card:#141a22; --border:#243041;
-  --text:#e8eef6; --muted:#a8b4c4; --dim:#7a8799;
-  --accent:#5b9fd4; --good:#3dbe8c; --warn:#e0b45c; --bad:#e07a6a;
-  --pad: max(16px, env(safe-area-inset-left));
-  --padr: max(16px, env(safe-area-inset-right));
+  --bg: #0c0e12;
+  --bg-elev: #141820;
+  --bg-card: #171c26;
+  --bg-card-hover: #1c2230;
+  --border: rgba(212, 175, 106, 0.14);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --text: #e8e6e1;
+  --text-muted: #b0aba0;
+  --text-dim: #8a857c;
+  --gold: #c9a227;
+  --gold-soft: #d4af6a;
+  --gold-dim: rgba(201, 162, 39, 0.18);
+  --teal: #3d9b8f;
+  --teal-soft: #5cb8ab;
+  --teal-dim: rgba(61, 155, 143, 0.16);
+  --risk: #c45c5c;
+  --risk-soft: #d47878;
+  --risk-dim: rgba(196, 92, 92, 0.16);
+  --watch: #8b7ec8;
+  --watch-soft: #b0a5e0;
+  --watch-dim: rgba(139, 126, 200, 0.18);
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, Menlo, monospace;
+  --nav-h: 3.25rem;
+  --radius: 10px;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  --max: 720px;
+  --pad-x: 1rem;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
 }
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + var(--safe-t) + 3.25rem);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
-  margin:0; font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg); color: var(--text);
-  padding: max(12px, env(safe-area-inset-top)) var(--padr) max(32px, env(safe-area-inset-bottom)) var(--pad);
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+  background:
+    radial-gradient(900px 480px at 10% -10%, rgba(201, 162, 39, 0.07), transparent 55%),
+    radial-gradient(700px 400px at 90% 5%, rgba(139, 126, 200, 0.07), transparent 50%),
+    var(--bg);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: var(--safe-b);
 }
-.banner {
-  position: sticky; top:0; z-index:10;
-  background: #1a1208; color: #f0d9a8; border:1px solid #5a4520;
-  padding:10px 12px; border-radius:10px; font-size:14px; font-weight:600;
-  margin-bottom:16px;
+
+a { color: var(--gold-soft); text-decoration: none; }
+a:hover { color: var(--gold); text-decoration: underline; }
+
+code, .path {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 0.12em 0.4em;
+  color: var(--gold-soft);
+  word-break: break-word;
 }
-h1 { font-size:1.45rem; margin:0 0 6px; line-height:1.25; }
-h2 { font-size:1.15rem; margin:28px 0 10px; color: var(--accent); }
-h3 { font-size:1rem; margin:16px 0 8px; }
-.sub { color: var(--muted); font-size:0.92rem; margin:0 0 18px; }
+
+/* Sticky draft banner */
+.draft-banner {
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  padding: calc(0.65rem + var(--safe-t)) calc(var(--pad-x) + var(--safe-r)) 0.65rem calc(var(--pad-x) + var(--safe-l));
+  background: linear-gradient(180deg, #1a1408 0%, #151008 100%);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.35);
+  color: var(--gold-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.draft-banner strong { color: var(--gold); font-weight: 700; }
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: calc(2.6rem + var(--safe-t));
+  z-index: 100;
+  min-height: var(--nav-h);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.35rem calc(var(--pad-x) + var(--safe-r)) 0.35rem calc(var(--pad-x) + var(--safe-l));
+  background: rgba(12, 14, 18, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-brand {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--watch-soft);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  padding-top: 0.15rem;
+}
+.nav-brand span {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  margin-left: 0.45rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  padding: 0.15rem 0 0.25rem;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: var(--watch-dim);
+  text-decoration: none;
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 calc(var(--pad-x) + var(--safe-l)) 3.5rem calc(var(--pad-x) + var(--safe-r));
+}
+
+section {
+  padding: 2.1rem 0 1.65rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+section:last-of-type { border-bottom: none; }
+
+.section-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.65rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+h1 { font-size: clamp(1.75rem, 7vw, 2.35rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.3rem, 4.5vw, 1.75rem); }
+h3 { font-size: 1.05rem; font-family: var(--font-sans); font-weight: 600; }
+
+.lede {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 40rem;
+  margin: 0 0 1.15rem;
+}
+
+.hero { padding-top: 1.5rem; padding-bottom: 1.75rem; }
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--gold-soft);
+}
+.badge.hold { border-color: rgba(201, 162, 39, 0.45); background: var(--gold-dim); color: var(--gold); }
+.badge.watch { border-color: rgba(139, 126, 200, 0.45); background: var(--watch-dim); color: var(--watch-soft); }
+.badge.risk { border-color: rgba(196, 92, 92, 0.4); background: var(--risk-dim); color: var(--risk-soft); }
+.badge.muted { color: var(--text-muted); border-color: var(--border-subtle); }
+.badge.teal { border-color: rgba(61, 155, 143, 0.4); background: var(--teal-dim); color: var(--teal-soft); }
+
+.card-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+
 .card {
-  background: var(--card); border:1px solid var(--border);
-  border-radius:12px; padding:14px 14px; margin:10px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+  transition: border-color 0.2s, background 0.2s;
 }
-.grid { display:grid; gap:10px; }
-@media (min-width:640px) { .grid.two { grid-template-columns:1fr 1fr; } }
+@media (hover: hover) {
+  .card:hover { border-color: var(--border); background: var(--bg-card-hover); }
+}
+.card.highlight {
+  border-color: rgba(139, 126, 200, 0.4);
+  background: linear-gradient(160deg, rgba(139, 126, 200, 0.1), var(--bg-card) 55%);
+}
+.card.risk-card {
+  border-color: rgba(196, 92, 92, 0.28);
+  background: linear-gradient(160deg, rgba(196, 92, 92, 0.07), var(--bg-card) 55%);
+}
+.card.soft-card {
+  border-color: rgba(201, 162, 39, 0.28);
+  background: linear-gradient(160deg, rgba(201, 162, 39, 0.07), var(--bg-card) 55%);
+}
+.card.proven-card {
+  border-color: rgba(61, 155, 143, 0.28);
+  background: linear-gradient(160deg, rgba(61, 155, 143, 0.08), var(--bg-card) 55%);
+}
+.card p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+.card h3 { margin-bottom: 0.45rem; }
+.card .id {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--gold-soft);
+  margin-bottom: 0.35rem;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+  box-shadow: var(--shadow);
+}
+.stat-card .kicker {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+.stat-card .value {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 4vw, 1.55rem);
+  color: var(--watch-soft);
+  margin-bottom: 0.35rem;
+}
+.stat-card .detail { font-size: 0.92rem; color: var(--text-muted); }
+
 .tag {
-  display:inline-block; font-size:12px; font-weight:700; letter-spacing:.02em;
-  padding:3px 8px; border-radius:999px; margin-right:6px; margin-bottom:4px;
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.55rem;
 }
-.tag.watch { background:#3a2f12; color:#e0b45c; }
-.tag.proven { background:#123528; color:#3dbe8c; }
-.tag.soft { background:#3a2a12; color:#e0b45c; }
-.tag.unk { background:#2a2030; color:#c4a0e0; }
-.tag.hold { background:#2a1212; color:#e07a6a; }
-ul { padding-left:1.15em; margin:8px 0; }
-li { margin:6px 0; }
-.chart-box { position:relative; height:220px; margin:8px 0 4px; }
-.chart-box.tall { height:260px; }
-table { width:100%; border-collapse:collapse; font-size:0.9rem; }
-th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--border); vertical-align:top; }
-th { color: var(--muted); font-weight:600; }
-details { background: var(--card); border:1px solid var(--border); border-radius:12px; padding:10px 12px; margin:8px 0; }
-summary { font-weight:600; cursor:pointer; }
-.mermaid { background:#0e141c; border-radius:10px; padding:8px; overflow-x:auto; }
-.footer { color: var(--dim); font-size:0.8rem; margin-top:28px; }
-path, .path { word-break: break-word; font-family: ui-monospace, monospace; font-size:0.78rem; color: var(--dim); }
+.tag.watch { background: var(--watch-dim); color: var(--watch-soft); }
+.tag.pilot { background: var(--teal-dim); color: var(--teal-soft); }
+.tag.hold { background: var(--gold-dim); color: var(--gold); }
+.tag.kill { background: var(--risk-dim); color: var(--risk-soft); }
+
+.ev {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+.ev.proven { background: var(--teal-dim); color: var(--teal-soft); }
+.ev.soft { background: var(--gold-dim); color: var(--gold-soft); }
+.ev.unknown { background: var(--risk-dim); color: var(--risk-soft); }
+
+.callout {
+  border-left: 3px solid var(--watch);
+  background: var(--watch-dim);
+  padding: 0.9rem 1rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1rem 0;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+.callout.gold { border-left-color: var(--gold); background: var(--gold-dim); }
+.callout.risk { border-left-color: var(--risk); background: var(--risk-dim); }
+.callout.teal { border-left-color: var(--teal); background: var(--teal-dim); }
+.callout strong { color: var(--watch-soft); }
+.callout.gold strong { color: var(--gold-soft); }
+.callout.risk strong { color: var(--risk-soft); }
+.callout.teal strong { color: var(--teal-soft); }
+
+.chart-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1rem 1rem 1.25rem;
+  margin: 1rem 0;
+}
+.chart-wrap h3 { margin-bottom: 0.25rem; }
+.chart-caption {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin: 0 0 0.85rem;
+}
+.chart-box {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  max-width: 100%;
+}
+.chart-box.doughnut { height: 260px; }
+
+.mermaid-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 1rem 0.65rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+.mermaid {
+  display: flex;
+  justify-content: center;
+  min-width: min(100%, 22rem);
+}
+.mermaid svg { max-width: 100%; height: auto; }
+
+ul.clean {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--text-muted);
+}
+ul.clean li { margin-bottom: 0.45rem; }
+
+.mvp-grid {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: 1fr;
+  margin-top: 0.85rem;
+}
+.mvp-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  min-height: 52px;
+}
+.mvp-item .icon {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--teal-dim);
+  color: var(--teal-soft);
+}
+.mvp-item.out .icon { background: var(--risk-dim); color: var(--risk-soft); }
+.mvp-item p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+.mvp-item strong { color: var(--text); font-weight: 600; }
+
+details.deep {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  margin: 0.65rem 0;
+  overflow: hidden;
+}
+details.deep summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 1rem 1.1rem;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+details.deep summary::-webkit-details-marker { display: none; }
+details.deep summary::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid var(--gold-soft);
+  border-bottom: 2px solid var(--gold-soft);
+  transform: rotate(-45deg);
+  transition: transform 0.15s;
+  flex-shrink: 0;
+  margin-top: -2px;
+}
+details.deep[open] summary::before { transform: rotate(45deg); }
+details.deep .body {
+  padding: 0 1.1rem 1.15rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.9rem;
+}
+details.deep .body p { margin: 0 0 0.75rem; }
+details.deep .body p:last-child { margin-bottom: 0; }
+details.deep .quote {
+  border-left: 3px solid var(--gold);
+  background: var(--gold-dim);
+  padding: 0.75rem 0.9rem;
+  border-radius: 0 8px 8px 0;
+  margin: 0.65rem 0;
+  color: var(--text);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+details.deep .src {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  margin-top: 0.5rem;
+}
+
+.compare {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+.compare .card .who {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.35rem;
+}
+
+.footer {
+  margin-top: 1.25rem;
+  padding: 2rem calc(var(--pad-x) + var(--safe-l));
+  padding-bottom: calc(2rem + var(--safe-b));
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+.footer .brand {
+  font-family: var(--font-serif);
+  color: var(--watch-soft);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+@media (min-width: 640px) {
+  :root { --pad-x: 1.25rem; --max: 780px; }
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-brand { padding-top: 0; }
+  .nav-links { margin-left: auto; padding: 0; }
+  .nav-links a { min-height: 40px; font-size: 0.78rem; padding: 0.4rem 0.55rem; }
+  .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .compare { grid-template-columns: 1fr 1fr; }
+  .mvp-grid { grid-template-columns: 1fr 1fr; }
+  .chart-box { height: 280px; }
+  .chart-box.doughnut { height: 300px; }
+  .lede { font-size: 1.1rem; }
+  section { padding: 2.5rem 0 2rem; }
+}
+
+@media (min-width: 768px) {
+  .card-grid.cols-2x2 { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding-top: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .nav-links a, details.deep summary::before { transition: none; }
+}
+
+@media print {
+  .draft-banner, .nav { position: static; }
+  body { background: #fff; color: #111; }
+}
+
 </style>
-</head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
+  </head>
 <body>
-<div class="banner">DRAFT · Private · Not Brand · Human call: T01 + T02 both WATCH (not PILOT) · Day 0 HOLD</div>
+  <div class="draft-banner" role="status">
+    <strong>DRAFT</strong> · private · human Gate = both T01+T02 <strong>WATCH</strong> (not PILOT) · Day 0 <strong>HOLD</strong>
+  </div>
 
-<h1>T02 deep review</h1>
-<p class="sub">Abu Dhabi strata / owners-corporation finance OS · phone report · 14 Sep 2026</p>
+  <nav class="nav" aria-label="Sections">
+    <div class="nav-brand">T02 Review <span>phone pack</span></div>
+    <div class="nav-links">
+      <a href="#what">What</a>
+      <a href="#posture">Posture</a>
+      <a href="#scores">Scores</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#tests">Tests</a>
+      <a href="#pilot">Split</a>
+      <a href="#mvp">MVP</a>
+      <a href="#why">Why WATCH</a>
+      <a href="#quotes">Quotes</a>
+      <a href="#pubs">Pubs</a>
+    </div>
+  </nav>
 
-<div class="card">
-  <span class="tag watch">WATCH</span>
-  <span class="tag hold">NO PILOT SPEND</span>
-  <p style="margin:10px 0 0"><strong>What it is.</strong> Software for Abu Dhabi management companies and owners’ committees: fees, ledgers, e-voting, and ADREC-facing reports. Driven by Decision 25/26 strata rules, not another PropTech listing app.</p>
-</div>
+  <main>
+    <section class="hero" id="top">
+      <span class="section-label">Deep review · 14 Sep 2026</span>
+      <h1>T02 · Abu Dhabi strata / OC finance OS</h1>
+      <p class="lede">Private phone report. Bots recommended discovery-gated PILOT. You overrode to WATCH on both T02 and T01 until this review lands. Nothing spent. Nothing built.</p>
+      <div class="hero-meta">
+        <span class="badge watch">Human · WATCH</span>
+        <span class="badge hold">Day 0 · HOLD</span>
+        <span class="badge muted">Referee · 46 / C</span>
+        <span class="badge risk">Reject BUILD</span>
+        <span class="badge muted">run 2026-09-13-uae-property</span>
+      </div>
+      <div class="stat-card">
+        <div class="kicker">One-line Gate card (bots)</div>
+        <div class="value">Unproven AD compliance workflow option</div>
+        <div class="detail">46/C. PILOT only as PILOT-0 discovery; PILOT-1 only after E051 ≥40, A01 budget signal, E063 clear. Your WATCH is stricter and coherent.</div>
+      </div>
+    </section>
 
-<h2>Bot recommendation vs you</h2>
-<div class="grid two">
-  <div class="card"><h3>Bots (autonomous)</h3><p>T02 → PILOT-0 (cheap discovery). T01 → WATCH. Score after haircut ~46/C.</p></div>
-  <div class="card"><h3>You (14 Sep)</h3><p>Both WATCH until you’ve reviewed T02 in depth. Correct hold. No eng, no intros, no capital.</p></div>
-</div>
+    <!-- 1. What T02 is -->
+    <section id="what">
+      <span class="section-label">1 · Plain English</span>
+      <h2>What T02 actually is</h2>
+      <p class="lede">Software for Abu Dhabi building managers and owners’ associations to run fees, ledgers, e-voting, and ADREC-facing reporting. Driven by 2025-26 strata governance rules, not another PropTech portal.</p>
+      <div class="callout">
+        <strong>Category:</strong> RegTech SaaS for jointly owned property. Beachhead customer: ADREC-accredited management companies and OC boards in Abu Dhabi. Trigger channel: developers at first-unit handover (30-day appointment clock).
+      </div>
+      <ul class="clean">
+        <li><strong>Why it showed up:</strong> Decision 25/26 package rewrote management and OC rules. Electronic management/accounting and six-month Centre reports are now Proven obligations.</li>
+        <li><strong>What it is not:</strong> A Dubai escrow clone, a listings app, a full IFM suite, or a payments company in v1.</li>
+        <li><strong>Market colour (not software TAM):</strong> ADREC YE2025 AED 142bn and H1 2026 AED 117bn transaction scale are Proven backdrop only.</li>
+      </ul>
+    </section>
 
-<h2>Score journey</h2>
-<div class="card">
-  <div class="chart-box"><canvas id="scoreChart"></canvas></div>
-  <p class="sub" style="margin:0">Stage 1 scored the story. Red/Referee cut Soft pain, WTP, timing. Evidence grade <strong>C</strong> = option, not a company.</p>
-</div>
+    <!-- 2. Posture -->
+    <section id="posture">
+      <span class="section-label">2 · Decision posture</span>
+      <h2>You vs the bots</h2>
+      <p class="lede">Autonomous Gate 3 locked a 1-bet T02 PILOT. On 14 Sep you overrode: both T02 and T01 are WATCH until this deep review.</p>
+      <div class="compare">
+        <div class="card">
+          <div class="who">Bots · autonomous</div>
+          <span class="tag pilot">PILOT</span>
+          <h3>T02 discovery-gated</h3>
+          <p>Referee: PILOT-0 (licence list, PDF hunt, interviews, OA teardown, E063 monitor). No eng beyond paper MVP. PILOT-1 only if existential tests clear. T01/T03 paper WATCH.</p>
+        </div>
+        <div class="card highlight">
+          <div class="who">You · 14 Sep override</div>
+          <span class="tag watch">WATCH</span>
+          <h3>T01 + T02 both WATCH</h3>
+          <p>No PILOT-0 spend, intros, or calendar. Day 0 remains HOLD. Competitor triad continues as review input only. Correct caution while Soft demand and Unknown buyer count sit open.</p>
+        </div>
+      </div>
+      <div class="callout gold" style="margin-top:1rem">
+        <strong>Supersedes</strong> autonomous Gate 3 1-bet T02 PILOT posture for human capital and attention. Digests stay draft. No Brand.
+      </div>
+    </section>
 
-<h2>Evidence mix (ledger n=63)</h2>
-<div class="card">
-  <div class="chart-box"><canvas id="evChart"></canvas></div>
-  <p><span class="tag proven">Proven 10</span> <span class="tag soft">Soft 44</span> <span class="tag unk">Unknown 9</span></p>
-</div>
+    <!-- 3. Score journey -->
+    <section id="scores">
+      <span class="section-label">3 · Score journey</span>
+      <h2>How hard the IC cut</h2>
+      <p class="lede">Stage 1 sold the story at 87. Underwriter capped at 55/C. Referee haircut landed ~46/C. Order held; investability did not.</p>
+      <div class="chart-wrap">
+        <h3>T02 score haircut</h3>
+        <p class="chart-caption">87 → 55/C → ~46/C · evidence grade C throughout Stage 2</p>
+        <div class="chart-box"><canvas id="chart-score" aria-label="T02 score journey bar chart"></canvas></div>
+      </div>
+      <div class="card-grid cols-2" style="margin-top:0.5rem">
+        <div class="card">
+          <h3>What got cut</h3>
+          <p>Customer pain, willingness to pay, timing, and product advantage. Soft inference without interviews or budget proof.</p>
+        </div>
+        <div class="card">
+          <h3>What stayed</h3>
+          <p>Technical feasibility of a thin MVP. AD specificity. Reject BUILD. Option shape if downside stays truncatable.</p>
+        </div>
+      </div>
+    </section>
 
-<h2>What flipped Proven</h2>
-<div class="card">
-  <p><span class="tag proven">E067</span> Decision 25: appoint accredited manager within <strong>30 days</strong> of first handover; <strong>electronic</strong> management/accounting; report to Centre every <strong>6 months</strong>.</p>
-  <p><span class="tag proven">E068</span> Decision 26: OC at ≥<strong>30%</strong> multi-owned; <strong>5–9</strong> resident members; developer excluded; electronic voting.</p>
-  <p><span class="tag soft">E084</span> “28 Feb 2026” effective date stays Soft (Art.45 = Gazette publication; date not in PDF).</p>
-</div>
+    <!-- 4. Evidence -->
+    <section id="evidence">
+      <span class="section-label">4 · Evidence now</span>
+      <h2>Proven vs Soft vs Unknown</h2>
+      <p class="lede">Ledger after Soft→Proven on Decision PDFs: Proven 10 · Soft 44 · Unknown 9 (n=63). T02-critical IDs below.</p>
+      <div class="chart-wrap">
+        <h3>Ledger strength mix</h3>
+        <p class="chart-caption">Whole-run counts · not T02-only</p>
+        <div class="chart-box doughnut"><canvas id="chart-evidence" aria-label="Evidence strength doughnut"></canvas></div>
+      </div>
+      <div class="card-grid cols-2x2" style="margin-top:0.75rem">
+        <div class="card proven-card">
+          <span class="ev proven">Proven</span>
+          <div class="id">E067 · Decision 25</div>
+          <h3>Electronic system + reports</h3>
+          <p>Art.20(6) 30-day appointment of Centre-accredited manager. Art.23(4) six-month Centre reports. Art.24 electronic management and accounting once appointed.</p>
+        </div>
+        <div class="card proven-card">
+          <span class="ev proven">Proven</span>
+          <div class="id">E068 · Decision 26</div>
+          <h3>OC e-voting rules</h3>
+          <p>≥30% multi-owned registration; 5-9 resident members; developer excluded from membership; secure electronic voting; one vote per participating owner.</p>
+        </div>
+        <div class="card soft-card">
+          <span class="ev soft">Soft</span>
+          <div class="id">E084 · calendar date</div>
+          <h3>“28 Feb 2026” not locked</h3>
+          <p>BSA counsel date. Primary PDF Art.45 says effective from Official Gazette publication. Gazette issue ID not found.</p>
+        </div>
+        <div class="card soft-card">
+          <span class="ev soft">Soft</span>
+          <div class="id">A01 · paid SaaS</div>
+          <h3>Soft ≠ paid third-party</h3>
+          <p>Obligation Proven. Whether managers budget for third-party software (vs upload theatre / Excel) remains Soft inference. Existential.</p>
+        </div>
+        <div class="card risk-card">
+          <span class="ev unknown">Unknown</span>
+          <div class="id">E051 · buyer count</div>
+          <h3>Management cos list missing</h3>
+          <p>ADREC ProfessionListing has Broker, Evaluator, Auctioneer, Surveyor, Account trustees, Developer. No management-company type. ≥40 was the bots’ floor.</p>
+        </div>
+        <div class="card risk-card">
+          <span class="ev unknown">Unknown</span>
+          <div class="id">E063 · free suite</div>
+          <h3>ADREC free tooling?</h3>
+          <p>No primary evidence of a complete free Decision 25 software suite this pass. Still a kill hypothesis. Monitor roadmap.</p>
+        </div>
+      </div>
+    </section>
 
-<h2>Existential tests (still open)</h2>
-<div class="grid">
-  <div class="card"><span class="tag soft">A01</span><strong> Paid SaaS or upload theatre?</strong><br/>Does Decision 25 create budgeted third-party software, or free/upload compliance?</div>
-  <div class="card"><span class="tag unk">E051</span><strong> Buyer count Unknown.</strong><br/>ADREC directory has no management-company profession type. ≥40 was the bots’ floor.</div>
-  <div class="card"><span class="tag unk">E063</span><strong> Free ADREC suite?</strong><br/>If Centre ships a complete free tool, the wedge collapses.</div>
-  <div class="card"><span class="tag soft">A05</span><strong> Dubai OA localisation.</strong><br/>How fast do ADDA/Mygate-class tools ship AD packs?</div>
-</div>
+    <!-- 5. Existential tests -->
+    <section id="tests">
+      <span class="section-label">5 · Existential tests</span>
+      <h2>Four gates that must clear</h2>
+      <p class="lede">Cheap to test. Expensive to ignore. Product eng sits behind all four.</p>
+      <div class="card-grid cols-2x2">
+        <div class="card soft-card">
+          <span class="tag hold">A01 Soft</span>
+          <h3>Paid SaaS or upload theatre?</h3>
+          <p>Does Decision 25 create budgeted third-party software lines, or free/upload compliance that Excel + accountant wins? <strong style="color:var(--gold-soft)">Single assumption that matters most</strong> (Referee).</p>
+        </div>
+        <div class="card risk-card">
+          <span class="tag kill">E051 Unknown</span>
+          <h3>≥40 addressable managers?</h3>
+          <p>Licence list / DARI enumeration / ADREC data request. If &lt;40 real buyers → WATCH or KILL. E066’s 3,566 professionals are not this denominator.</p>
+        </div>
+        <div class="card risk-card">
+          <span class="tag kill">E063 Unknown</span>
+          <h3>Free Centre suite?</h3>
+          <p>If ADREC ships templates or a portal that covers fee pack + report, the paid wedge collapses. Kill trigger if complete free suite appears.</p>
+        </div>
+        <div class="card soft-card">
+          <span class="tag hold">A05 Soft</span>
+          <h3>Dubai OA localisation speed</h3>
+          <p>ADDA / Mygate / Socienta / Lazim already marketed in Dubai. How fast do they ship AD packs with existing distribution? Soft / Hypothesis until teardown.</p>
+        </div>
+      </div>
+    </section>
 
-<h2>Capital shape (if you ever reopen)</h2>
-<div class="card">
-<pre class="mermaid">
+    <!-- 6. PILOT split -->
+    <section id="pilot">
+      <span class="section-label">6 · Capital shape</span>
+      <h2>Red’s PILOT-0 vs PILOT-1</h2>
+      <p class="lede">If you ever reopen, this is the only shape Red and Referee accept. Bundled “discovery + MVP + pilots” as one envelope is rejected.</p>
+      <div class="mermaid-wrap">
+        <pre class="mermaid">
 flowchart TB
-  W[WATCH · reading only] --> P0[PILOT-0 discovery]
-  P0 --> T{E051 + A01 + E063 clear?}
-  T -->|yes| P1[PILOT-1 thin MVP + paid pilots]
-  T -->|no| K[Stay WATCH or kill]
-  P1 --> B{Paid pilots work?}
-  B -->|yes| BUILD[Only then consider BUILD]
+  W["WATCH · reading only · now"] --> P0["PILOT-0 · discovery only"]
+  P0 --> T{"E051 ≥40 AND A01 budget AND E063 clear?"}
+  T -->|yes| P1["PILOT-1 · thin MVP + 2 paid pilots"]
+  T -->|no| K["Stay WATCH or KILL"]
+  P1 --> B{"≥2 paid cash pilots?"}
+  B -->|yes| BUILD["Only then discuss BUILD"]
   B -->|no| K
-</pre>
-  <p class="sub">Red’s rule: no product eng in PILOT-0. Your current WATCH is stricter and coherent.</p>
-</div>
+        </pre>
+      </div>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <span class="tag watch">PILOT-0</span>
+          <h3>Allowed spend</h3>
+          <ul class="clean">
+            <li>Licence list (E051)</li>
+            <li>Gazette / primary text hunt</li>
+            <li>15-20 manager interviews</li>
+            <li>Counsel / ADREC expert</li>
+            <li>OA teardown (E076)</li>
+            <li>E063 monitor</li>
+            <li><strong>No product eng</strong> beyond paper MVP spec</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag pilot">PILOT-1</span>
+          <h3>Only if gates pass</h3>
+          <ul class="clean">
+            <li>Thin MVP wedge</li>
+            <li>Chase <strong>2 paid</strong> (cash) pilots</li>
+            <li>120-day clock from PILOT-1 start</li>
+            <li>Uneconomic ACV → KILL</li>
+            <li>Do not treat Soft forever as eng permission</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<h2>MVP shape (only after tests)</h2>
-<div class="card">
-  <ul>
-    <li>Fees / service-charge ledger</li>
-    <li>Bilingual (AR/EN)</li>
-    <li>E-vote support</li>
-    <li>Six-month ADREC-oriented export</li>
-    <li><strong>Not</strong> payments rail or full IFM suite in v1</li>
-    <li>AI out of critical path</li>
-  </ul>
-</div>
+    <!-- 7. MVP -->
+    <section id="mvp">
+      <span class="section-label">7 · Product shape</span>
+      <h2>MVP only if tests clear</h2>
+      <p class="lede">Underwriter and Referee agree on the wedge. Do not build any of this under WATCH.</p>
+      <div class="mvp-grid">
+        <div class="mvp-item"><div class="icon">1</div><p><strong>Fees / service-charge ledger</strong><br/>Centre-ready fee packs and owner arrears.</p></div>
+        <div class="mvp-item"><div class="icon">2</div><p><strong>Bilingual AR / EN</strong><br/>Non-negotiable for AD operators.</p></div>
+        <div class="mvp-item"><div class="icon">3</div><p><strong>E-vote support</strong><br/>Decision 26 compatible audit trail.</p></div>
+        <div class="mvp-item"><div class="icon">4</div><p><strong>Six-month ADREC export</strong><br/>Report the Centre actually receives.</p></div>
+        <div class="mvp-item out"><div class="icon">×</div><p><strong>Not in v1:</strong> payments rail, full IFM suite, Dubai clone, AI on critical path, consumer apps.</p></div>
+        <div class="mvp-item out"><div class="icon">×</div><p><strong>Not in PILOT-0:</strong> hiring eng, architecture burn, Seed memo, incorporation.</p></div>
+      </div>
+    </section>
 
-<h2>Why WATCH fits</h2>
-<div class="card">
-  <ul>
-    <li>Regulatory spine is now Proven. Demand and buyer denominator are not.</li>
-    <li>Illustrative SAM / ARR in the IC pack are Estimates. Ignore hockey sticks.</li>
-    <li>T01 stays WATCH: Project 360 + crowded escrow/developer OS.</li>
-    <li>Competitor triad tearsheet is running as review input, not a green light.</li>
-  </ul>
-</div>
+    <!-- 8. Why -->
+    <section id="why">
+      <span class="section-label">8 · Coherence check</span>
+      <h2>Why not BUILD · why bots said PILOT · why WATCH fits</h2>
+      <div class="card-grid">
+        <div class="card risk-card">
+          <span class="tag kill">Reject BUILD</span>
+          <h3>Why not BUILD now</h3>
+          <ul class="clean">
+            <li>A01 paid demand unproven. Soft obligations ≠ purchase orders.</li>
+            <li>E051 buyer denominator Unknown. Beachhead may be a handful of captives.</li>
+            <li>E063 free-suite risk and A05 OA localisation can erase WTP before you ship.</li>
+            <li>Score 46/C is a weak call option, not mid-score comfort. Illustrative SAM/ARR are Estimates. Ignore hockey sticks.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag pilot">Bots · PILOT</span>
+          <h3>Why bots still said PILOT</h3>
+          <ul class="clean">
+            <li>Proven rewrite timing (E012) + Proven AD scale backdrop + clean MVP map to Proven obligations.</li>
+            <li>Less Proven government substitute on the AD strata beachhead than T01 faces with Project 360.</li>
+            <li>Cheap to falsify before eng if capital is split (PILOT-0 then conditional PILOT-1).</li>
+            <li>Killers not yet fired, so KILL is premature.</li>
+          </ul>
+        </div>
+        <div class="card highlight">
+          <span class="tag watch">Your WATCH</span>
+          <h3>Why WATCH is coherent</h3>
+          <ul class="clean">
+            <li>Regulatory spine is now Proven. Demand and buyer count are not.</li>
+            <li>Referee’s own fallback: if the PILOT-0/1 split cannot be enforced, demote to WATCH + discovery budget.</li>
+            <li>You chose the stricter form: no discovery burn until you personally finish this review.</li>
+            <li>T01 stays WATCH for the same reason family: crowded, Project 360 live, serialise behind any T02 reopening.</li>
+            <li>Attention cost of Day 0 while other lines compete. Reading first is rational.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<h2>Key excerpts (tap to expand)</h2>
-<details open>
-  <summary>Referee capital test</summary>
-  <p>Would fund a cheap discovery option (licence list, Soft text hunt, interviews, teardown, E063 monitor). Would <strong>not</strong> fund bilingual multi-tenant ledger before A01/A02 move. Best use of a bounded validation tranche only if product spend stays behind existential tests.</p>
-</details>
-<details>
-  <summary>Red D1 — don’t front-load MVP</summary>
-  <p>A “PILOT” that hires eng in days 0–30 before E051 magnitude and A01 interview consensus is a mini-BUILD. Prefer WATCH + discovery budget over bundled PILOT.</p>
-</details>
-<details>
-  <summary>Pubs-first</summary>
-  <p>Primary PDFs for Decisions 24/25/26/165 found on DMT Legal Portal. E051 management-company list <strong>not found</strong>. Gazette issue IDs not found.</p>
-</details>
+    <!-- 9. Deep-read quotes -->
+    <section id="quotes">
+      <span class="section-label">9 · Deep-read condensed</span>
+      <h2>Key quotes (tap to expand)</h2>
+      <p class="lede">Ordered from capital test → Red → pubs. Not raw files.</p>
 
-<p class="footer">Draft for Shayan only. Digests separate HTML also building. Sources under the UAE property run folder. No Brand · no publish without explicit yes.</p>
+      <details class="deep" open>
+        <summary>Referee · independent capital test</summary>
+        <div class="body">
+          <div class="quote">“I would fund a cheap discovery option (licence list, Soft text hunt, 15 interviews, OA teardown, E063 monitor). I would not fund bilingual multi-tenant ledger eng before A01/A02 move.”</div>
+          <p>Best available use of a <strong>bounded validation tranche</strong>, yes, if product spend stays behind existential tests. Underwriter’s reject-BUILD is correct. A bundled PILOT that hires full-stack in days 0-30 fails the truncate-before-build test.</p>
+          <div class="src">theses/T02/referee-verdict.md · §0</div>
+        </div>
+      </details>
 
+      <details class="deep">
+        <summary>Referee · Gate 2 one-liner</summary>
+        <div class="body">
+          <div class="quote">“Unproven AD compliance workflow option (46/C). Gate 2: PILOT as PILOT-0 discovery only; PILOT-1 only after E051≥40, A01 budget signal, E063 clear. Reject BUILD. SAM/Y5 not underwritten.”</div>
+          <p>Fallback if the split cannot be enforced: <strong>WATCH + discovery budget</strong> (= PILOT-0 scope). Do not approve Underwriter’s bundled envelope.</p>
+          <div class="src">theses/T02/referee-verdict.md · §6</div>
+        </div>
+      </details>
+
+      <details class="deep">
+        <summary>Red D1 · don’t front-load MVP</summary>
+        <div class="body">
+          <div class="quote">“A PILOT that looks like a mini-BUILD fails Red’s Stage 1 intent (cheap option, truncatable downside). If E051 comes back at 25 managers or interviews say ‘upload PDF to ADREC,’ product spend is wasted and ego attaches.”</div>
+          <p>Preferred posture: WATCH with discovery budget, or hard-gated PILOT-0 then PILOT-1. Treat Underwriter 55 as a ceiling, Soft-haircut toward ~49.</p>
+          <div class="src">theses/T02/red-stage2.md · D1 / §6</div>
+        </div>
+      </details>
+
+      <details class="deep">
+        <summary>Red · failure pre-mortem</summary>
+        <div class="body">
+          <div class="quote">“Eng shipped a ledger while the licence list was ‘in progress.’ Soft counsel PDFs never appeared. ADREC published a free reporting workbook. Two ‘pilots’ were discounted favours, not paid. We called it learning. Capital and calendar were gone.”</div>
+          <p>Prevention: PILOT-0 only; hard stop on product; paid pilots means paid; no Seed memo until Red kills are green.</p>
+          <div class="src">theses/T02/red-stage2.md · §4</div>
+        </div>
+      </details>
+
+      <details class="deep">
+        <summary>SHAYAN-REPORT · why not go harder yet</summary>
+        <div class="body">
+          <ul class="clean">
+            <li>Decision operative text was Soft at report time (now partially Proven via primary PDF; date still Soft).</li>
+            <li>Number of addressable management companies (E051) is Unknown.</li>
+            <li>Risk ADREC ships a free suite (E063).</li>
+            <li>After Red/Referee haircut: <strong>46/C</strong>, an option, not a proven company.</li>
+          </ul>
+          <div class="src">SHAYAN-REPORT.md · §A</div>
+        </div>
+      </details>
+
+      <details class="deep">
+        <summary>Decision 25 primary quotes (Proven E067)</summary>
+        <div class="body">
+          <div class="quote">Art.20(6): appoint a management company within thirty (30) days of first unit handover.</div>
+          <div class="quote">Art.23(4): provide the Centre a periodic report every (6) six months.</div>
+          <div class="quote">Art.24(1): once appointed, use an electronic management and accounting system…</div>
+          <div class="quote">Art.45: published in the Official Gazette; effective from the date of its publication.</div>
+          <div class="src">evidence-ledger.md · Verifier Soft→Proven pass</div>
+        </div>
+      </details>
+
+      <details class="deep">
+        <summary>Human Gate override · 14 Sep</summary>
+        <div class="body">
+          <div class="quote">“Both T02 and T01 are WATCH, not PILOT. Needs deeper T02 review before any PILOT decision. Supersedes autonomous Gate 3 1-bet T02 PILOT posture for human capital/effort. PILOT-0 execution HOLD.”</div>
+          <div class="src">decision-log.md · 2026-09-14 Human Gate override</div>
+        </div>
+      </details>
+    </section>
+
+    <!-- 10. Pubs-first -->
+    <section id="pubs">
+      <span class="section-label">10 · Pubs-first</span>
+      <h2>What the document hunt found</h2>
+      <p class="lede">Primary PDFs beat counsel summaries. Buyer list still missing.</p>
+      <div class="card-grid cols-2">
+        <div class="card proven-card">
+          <span class="ev proven">Found</span>
+          <h3>Decision PDFs</h3>
+          <p>Decisions <strong>24 / 25 / 26 / 165 of 2025</strong> primary PDFs on DMT Legal Portal (<code>dmtlegislationhub.dmt.gov.ae</code>). Arabic + English translation in-file for Decision 25. Media Office package announcement already Proven (E012).</p>
+        </div>
+        <div class="card risk-card">
+          <span class="ev unknown">Not found</span>
+          <h3>Management company list</h3>
+          <p>No public downloadable register or clean aggregate count of ADREC-accredited management companies. Directory API ~5,050 profession records; filter types exclude management companies. DARI has a licence pathway page, not a public directory.</p>
+        </div>
+      </div>
+      <div class="callout teal" style="margin-top:1rem">
+        <strong>Also not found:</strong> Official Gazette issue IDs for those Decisions. E063 free complete suite. Primary amended Law 3/2015 / Law 2/2025 PDF still Soft.
+      </div>
+      <ul class="clean">
+        <li>Shelf: <code>research/sources/DMT-Decision-{24,25,26,165}-2025-legislationhub.pdf</code></li>
+        <li>Summary: <code>research/pubs-first-findings.md</code></li>
+        <li>Verifier audit: <code>verify-soft-to-proven-decisions.md</code></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand">T02 deep review</div>
+    <p>DRAFT · private · for Shayan only · no Brand · no publish<br />
+    Australian English · charts need network (Chart.js + Mermaid CDN)<br />
+    Sources: SHAYAN-REPORT · referee-verdict · red-stage2 · pubs-first · evidence-ledger · decision-log</p>
+  </footer>
 <script>
-const narrow = matchMedia('(max-width:639px)').matches;
-Chart.defaults.color = '#a8b4c4';
-Chart.defaults.borderColor = '#243041';
-Chart.defaults.responsive = true;
-Chart.defaults.maintainAspectRatio = false;
-new Chart(document.getElementById('scoreChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Stage 1', 'Underwriter', 'Referee'],
-    datasets: [{
-      label: 'Score /100',
-      data: [87, 55, 46],
-      backgroundColor: ['#5b9fd4', '#e0b45c', '#e07a6a']
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false } },
-    scales: { y: { beginAtZero: true, max: 100 } }
+/* T02 deep review - charts + mermaid + nav */
+(function () {
+  "use strict";
+
+  const gold = "#c9a227";
+  const goldSoft = "#d4af6a";
+  const teal = "#3d9b8f";
+  const tealSoft = "#5cb8ab";
+  const risk = "#c45c5c";
+  const riskSoft = "#d47878";
+  const watch = "#8b7ec8";
+  const watchSoft = "#b0a5e0";
+  const muted = "#9a968c";
+  const grid = "rgba(255,255,255,0.05)";
+  const tick = "#6b6760";
+
+  function whenReady(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
   }
-});
-new Chart(document.getElementById('evChart'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Proven', 'Soft', 'Unknown'],
-    datasets: [{
-      data: [10, 44, 9],
-      backgroundColor: ['#3dbe8c', '#e0b45c', '#c4a0e0']
-    }]
-  },
-  options: {
-    plugins: { legend: { position: narrow ? 'bottom' : 'right' } }
+
+  function initNav() {
+    const links = document.querySelectorAll(".nav-links a[href^='#']");
+    const sections = [];
+    links.forEach(function (a) {
+      const id = a.getAttribute("href").slice(1);
+      const el = document.getElementById(id);
+      if (el) sections.push({ id: id, el: el, a: a });
+    });
+    function onScroll() {
+      const y = window.scrollY + 120;
+      let current = sections[0];
+      for (let i = 0; i < sections.length; i++) {
+        if (sections[i].el.offsetTop <= y) current = sections[i];
+      }
+      links.forEach(function (a) { a.classList.remove("active"); });
+      if (current) current.a.classList.add("active");
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
-});
+
+  function initCharts() {
+    if (typeof Chart === "undefined") return;
+
+    Chart.defaults.color = muted;
+    Chart.defaults.borderColor = grid;
+    Chart.defaults.font.family = "'DM Sans', system-ui, sans-serif";
+    Chart.defaults.font.size = 12;
+
+    const scoreEl = document.getElementById("chart-score");
+    if (scoreEl) {
+      new Chart(scoreEl, {
+        type: "bar",
+        data: {
+          labels: ["Stage 1", "Underwriter", "Referee"],
+          datasets: [{
+            label: "Score /100",
+            data: [87, 55, 46],
+            backgroundColor: [goldSoft, gold, riskSoft],
+            borderRadius: 6,
+            maxBarThickness: 56
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "rgba(20,24,32,0.95)",
+              titleColor: goldSoft,
+              bodyColor: "#e8e6e1",
+              borderColor: "rgba(212,175,106,0.25)",
+              borderWidth: 1,
+              cornerRadius: 8,
+              padding: 10,
+              callbacks: {
+                afterLabel: function (ctx) {
+                  const notes = ["Pre-IC narrative", "55/C · PILOT bundled", "46/C · discovery-gated"];
+                  return notes[ctx.dataIndex] || "";
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { color: muted, font: { size: 12, weight: "500" } }
+            },
+            y: {
+              beginAtZero: true,
+              max: 100,
+              grid: { color: grid },
+              ticks: { color: tick, stepSize: 20 }
+            }
+          }
+        }
+      });
+    }
+
+    const evEl = document.getElementById("chart-evidence");
+    if (evEl) {
+      const narrow = window.matchMedia("(max-width: 639px)").matches;
+      new Chart(evEl, {
+        type: "doughnut",
+        data: {
+          labels: ["Proven", "Soft", "Unknown"],
+          datasets: [{
+            data: [10, 44, 9],
+            backgroundColor: [tealSoft, goldSoft, watchSoft],
+            borderColor: "#0c0e12",
+            borderWidth: 3,
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: "58%",
+          plugins: {
+            legend: {
+              position: narrow ? "bottom" : "right",
+              labels: {
+                color: muted,
+                boxWidth: 12,
+                padding: 14,
+                font: { size: 13 }
+              }
+            },
+            tooltip: {
+              backgroundColor: "rgba(20,24,32,0.95)",
+              titleColor: goldSoft,
+              bodyColor: "#e8e6e1",
+              borderColor: "rgba(212,175,106,0.25)",
+              borderWidth: 1,
+              cornerRadius: 8,
+              padding: 10,
+              callbacks: {
+                afterLabel: function (ctx) {
+                  const notes = [
+                    "E067/E068 Decision obligations; AD scale; package announce",
+                    "Includes E084 date Soft; A01 paid-SaaS Soft",
+                    "Includes E051 buyer count; E063 free suite"
+                  ];
+                  return notes[ctx.dataIndex] || "";
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+  }
+
+  function initMermaid() {
+    if (typeof mermaid === "undefined") return;
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "dark",
+      securityLevel: "loose",
+      flowchart: { curve: "basis", padding: 12 },
+      themeVariables: {
+        darkMode: true,
+        background: "#171c26",
+        primaryColor: "#1c2230",
+        primaryTextColor: "#e8e6e1",
+        primaryBorderColor: "#8b7ec8",
+        lineColor: "#8a857c",
+        secondaryColor: "#141820",
+        tertiaryColor: "#0c0e12",
+        fontFamily: "DM Sans, system-ui, sans-serif"
+      }
+    });
+  }
+
+  whenReady(function () {
+    initNav();
+    function boot() {
+      if (typeof Chart === "undefined" || typeof mermaid === "undefined") {
+        window.addEventListener("load", function () {
+          initMermaid();
+          initCharts();
+        });
+        return;
+      }
+      initMermaid();
+      initCharts();
+    }
+    boot();
+  });
+})();
+
 </script>
 </body>
 </html>
